@@ -1,0 +1,26 @@
+.teaser {
+    background-image: url(../../assets/slide1.jpg);
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    /* align-items: flex-start; */
+    color: #ffffff;
+}
+
+.teaser-content h1 {
+    font-size: 3rem;
+}
+
+#instagram-section {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#instagram-section a {
+    color: #ffffff;
+}
