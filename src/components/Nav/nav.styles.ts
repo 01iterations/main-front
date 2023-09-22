@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Link} from'react-router-dom'
 
 export const sizes = {
     xsmall: "320px",
@@ -48,6 +49,9 @@ export const LinkGroup = styled.div`
         font-size: 1.1vw;
         color: white;
         opacity: 0.7;
+        @media (max-width: 768px) {
+            display: none;
+        }
         @media ${devices.xlarge} {
             font-size: 1em;
         }
@@ -98,4 +102,53 @@ export const OrganizationLogo = styled.h3`
     }
     /* font-size: 1.5vw; */
     /* margin-top: 10px; */
+`;
+
+// mobile
+
+export const Hamburger = styled.div`
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px;
+
+    span {
+        
+        height: 2px;
+        width: 25px;
+        background-color: white;
+        opacity: 8;
+        
+        margin-bottom: 5px;
+        border-radius: 5px;
+    }
+    @media (max-width: 768px) {
+        display: flex;
+    }
+`;
+
+export const Menu = styled.div`
+    display: ${({ show }) => (show ? "flex" : "none")};
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-top: 7vh;
+    top: calc(100% - 7vh);
+
+    width: 100%;
+    /* border: 1px solid white; */
+    opacity: 0.8;
+    background-color: #282930;
+`;
+
+export const MenuItem = styled(Link)`
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    &:hover {
+        background-color: black;
+    }
 `;
