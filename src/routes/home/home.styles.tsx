@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 export const VideoContainer = styled.video`
     width: 100%;
-    height:100vh;
+    height: 100vh;
     object-fit: cover;
+`;
+
+export const HomeContainer = styled.div`
+    overflow: hidden;
 `;

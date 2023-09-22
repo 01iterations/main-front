@@ -1,0 +1,42 @@
+[
+    {
+        "src": "assets/slides/4k-sample.jpg",
+        "id": "whiteCursor",
+        "quote": {
+            "title": "Coming soon..."
+        }
+    },
+    {
+        "src": "assets/slides/07.png",
+        "quote": {
+            "title": "Coming soon..."
+        }
+    },
+    {
+        "src": "assets/slides/Final_Exterior-1.png",
+        "quote": {
+            "title": "Coming soon..."
+        }
+    },
+    {
+        "src": "assets/slides/Final_interior-1.png",
+        "quote": {
+            "title": "Coming soon...",
+            "body": ""
+        }
+    },
+    {
+        "src": "assets/slides/Marketing 01.png",
+        "quote": {
+            "title": "Coming soon...",
+            "body": ""
+        }
+    },
+    {
+        "src": "assets/slides/01.png",
+        "quote": {
+            "title": "Coming soon..."
+        }
+    }
+
+]
