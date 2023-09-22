@@ -42,9 +42,9 @@ function Nav() {
                 <MenuItem to="/">Home</MenuItem>
                 <MenuItem to="/">About</MenuItem>
                 <MenuItem to="/projects">Projects</MenuItem>
-                <MenuItem to="/courses">Courses</MenuItem>
+                <MenuItem to="/">Courses</MenuItem>
                 <MenuItem to="/">Services</MenuItem>
-                <MenuItem to="/contact">Contact</MenuItem>
+                <MenuItem to="/">Contact</MenuItem>
             </Menu>
         </Navbar>
     );
