@@ -1,0 +1,30 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+@font-face {
+    font-family: caslon;
+    src: url('./assets/fonts/Caslon-Titling-MT-W01.ttf');
+}
+
+@font-face {
+    font-family: avenir;
+    src: url('./assets/fonts/Avenir-Light.ttf');
+}
+
+@font-face {
+    font-family: playfair;
+    src: url('./assets/fonts/PlayfairDisplay-VariableFont_wght.ttf');
+}
+
