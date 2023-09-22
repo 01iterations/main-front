@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import {Link} from'react-router-dom'
 
+interface MenuProps {
+    show: boolean;
+}
+
 export const sizes = {
     xsmall: "320px",
     small: "480px",
@@ -127,7 +131,7 @@ export const Hamburger = styled.div`
     }
 `;
 
-export const Menu = styled.div`
+export const Menu = styled.div<MenuProps>`
     display: ${({ show }) => (show ? "flex" : "none")};
     flex-direction: column;
     justify-content: center;
