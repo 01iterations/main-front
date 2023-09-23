@@ -1,0 +1,32 @@
+[
+    {
+        "src": "assets/Carousel/slide2.jpg",
+        "quote": {
+            "title": "Coming soon..."
+        }
+    },
+    {
+        "src": "assets/Carousel/slide3.jpg",
+        "quote": {
+            "title": "Coming soon..."
+        }
+    },
+    {
+        "src": "assets/Carousel/slide4.jpg",
+        "quote": {
+            "title": "Coming soon..."
+        }
+    },
+    {
+        "src": "assets/Carousel/slide5.jpg",
+        "quote": {
+            "title": "Coming soon..."
+        }
+    },
+    {
+        "src": "assets/Carousel/slide6.jpg",
+        "quote": {
+            "title": "Coming soon..."
+        }
+    }
+]
