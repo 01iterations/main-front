@@ -1,18 +1,20 @@
 import { Link } from "react-router-dom";
-import { ProjectCardContainer, ProjectCardContentDetails, ProjectContent } from "./projectCard.styles";
+import {
+    ProjectCardContainer,
+    ProjectCardContentDetails,
+    ProjectContent,
+} from "./projectCard.styles";
 
 type PropsType = {
     thumbnail: string;
     courseTitle: string;
 };
 
-export function ProjectCard({
-    thumbnail,
-    courseTitle,
-}: PropsType) {
+export function ProjectCard({ thumbnail, courseTitle }: PropsType) {
     return (
         <ProjectCardContainer>
-            <Link to={`/projects/${courseTitle}`}>
+            {/* <Link to={`/projects/${courseTitle}`}> */}
+            <Link to={`/projects`}>
                 <ProjectContent>
                     <ProjectCardContentDetails>
                         <h6> {courseTitle}</h6>
