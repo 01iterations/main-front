@@ -1,9 +1,9 @@
 import Nav from "../../components/Nav/nav.component";
 // import LogoVideo from '../../assets/home/sample.mp4'
-import HighLight1 from "@assets/home/Highlight-02.png";
-import HighLight2 from "@assets/home/Highlight-03.png";
-import HighLight3 from "@assets/home/Highlight-04.png";
-import HighLight4 from "@assets/home/Highlight-05.png";
+import HighLight1 from "/assets/home/Highlight-02.png";
+import HighLight2 from "/assets/home/Highlight-03.png";
+import HighLight3 from "/assets/home/Highlight-04.png";
+import HighLight4 from "/assets/home/Highlight-05.png";
 import ImageSlider from "../../components/imageSlider/imageSlider.component";
 import { HomeContainer } from "./home.styles";
 

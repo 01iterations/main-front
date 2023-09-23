@@ -9,7 +9,7 @@ import {
     OrganizationLogo,
 } from "../../components/Nav/nav.styles";
 
-import logoImg from "../../assets/icons/01itersWhite.png";
+import logoImg from "/assets/icons/01itersWhite.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
