@@ -25,7 +25,7 @@ export function Projects() {
                             <img
                                 className="d-block w-100 cut"
                                 // id={slide.id !== undefined ? slide.id : undefined}
-                                src={`src/${slide.src}`}
+                                src={slide.src}
                                 alt={index + "slide"}
                             />
                         </Carousel.Item>
@@ -36,7 +36,7 @@ export function Projects() {
                         <ProjectCard
                             key={index}
                             courseTitle={slide.quote.title}
-                            thumbnail={`src/${slide.src}`}
+                            thumbnail={slide.src}
                         />
                     ))}
                 </ProjectsGrid>
