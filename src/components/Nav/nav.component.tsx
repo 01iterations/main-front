@@ -40,8 +40,8 @@ function Nav() {
             </Hamburger>
             <Menu show={showMenu}>
                 <MenuItem to="/">Home</MenuItem>
-                <MenuItem to="/">About</MenuItem>
                 <MenuItem to="/projects">Projects</MenuItem>
+                <MenuItem to="/">About</MenuItem>
                 <MenuItem to="/">Courses</MenuItem>
                 <MenuItem to="/">Services</MenuItem>
                 <MenuItem to="/">Contact</MenuItem>
