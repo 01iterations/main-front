@@ -152,7 +152,7 @@ export const MenuItem = styled(Link)`
     color: white;
     text-decoration: none;
     padding: 1rem;
-    &:hover {
+    &:active {
         background-color: black;
     }
 `;

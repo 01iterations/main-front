@@ -27,8 +27,8 @@ function Nav() {
             </OrganizationGroup>
             <LinkGroup>
                 <Link to="/">Home</Link>
-                <Link to="/">About</Link>
                 <Link to="/projects">Projects</Link>
+                <Link to="/">About</Link>
                 <Link to="/courses">Courses</Link>
                 <Link to="/">Services</Link>
                 <Link to="/contact">Contact</Link>
