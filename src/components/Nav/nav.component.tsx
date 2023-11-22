@@ -15,6 +15,7 @@ import { useState } from "react";
 
 function Nav() {
     const [showMenu, setShowMenu] = useState(false);
+    const [featureBlock, setFeatureBlock] = useState(false);
 
     const toggleMenu = () => {
         setShowMenu(!showMenu);
@@ -28,10 +29,10 @@ function Nav() {
             <LinkGroup>
                 <Link to="/">Home</Link>
                 <Link to="/projects">Projects</Link>
-                <Link to="/">About</Link>
-                <Link to="/courses">Courses</Link>
-                <Link to="/">Services</Link>
-                <Link to="/contact">Contact</Link>
+                {featureBlock && <Link to="/">About</Link>}
+                {featureBlock &&<Link to="/courses">Courses</Link>}
+                {featureBlock &&<Link to="/">Services</Link>}
+                {featureBlock &&<Link to="/contact">Contact</Link>}
             </LinkGroup>
             <Hamburger onClick={toggleMenu}>
                 <span />
@@ -41,10 +42,10 @@ function Nav() {
             <Menu show={showMenu}>
                 <MenuItem to="/">Home</MenuItem>
                 <MenuItem to="/projects">Projects</MenuItem>
-                <MenuItem to="/">About</MenuItem>
-                <MenuItem to="/">Courses</MenuItem>
-                <MenuItem to="/">Services</MenuItem>
-                <MenuItem to="/">Contact</MenuItem>
+                {featureBlock &&<MenuItem to="/">About</MenuItem>}
+                {featureBlock &&<MenuItem to="/">Courses</MenuItem>}
+                {featureBlock &&<MenuItem to="/">Services</MenuItem>}
+                {featureBlock &&<MenuItem to="/">Contact</MenuItem>}
             </Menu>
         </Navbar>
     );
