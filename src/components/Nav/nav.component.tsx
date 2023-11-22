@@ -4,18 +4,18 @@ import {
     Menu,
     MenuItem,
     Navbar,
-    OraganizationLogoImg,
+    // OraganizationLogoImg,
     OrganizationGroup,
-    OrganizationLogo,
+    // OrganizationLogo,
 } from "../../components/Nav/nav.styles";
 
-import logoImg from "/assets/icons/01itersWhite.png";
+// import logoImg from "/assets/icons/01itersWhite.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
 function Nav() {
     const [showMenu, setShowMenu] = useState(false);
-    const [featureBlock, setFeatureBlock] = useState(false);
+    const [featureBlock] = useState(false);
 
     const toggleMenu = () => {
         setShowMenu(!showMenu);
