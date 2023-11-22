@@ -8,6 +8,7 @@ import {
 import Home from "./routes/home/home.route";
 import Projects from "./routes/projects/projects.route";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import CourseDetails from "./routes/course-details/courseDetails.route";
 
 const router = createHashRouter([
     {
@@ -18,6 +19,10 @@ const router = createHashRouter([
         path: "/projects",
         element: <Projects />,
     },
+    {
+        path: "/course/1",
+        element: <CourseDetails />,
+    }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

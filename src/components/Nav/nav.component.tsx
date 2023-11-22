@@ -22,8 +22,8 @@ function Nav() {
     return (
         <Navbar>
             <OrganizationGroup>
-                <OraganizationLogoImg src={logoImg} alt="logo img" />
-                <OrganizationLogo>01&nbsp;ITERATIONS </OrganizationLogo>
+                {/* <OraganizationLogoImg src={logoImg} alt="logo img" /> */}
+                {/* <OrganizationLogo>01&nbsp;ITERATIONS </OrganizationLogo> */}
             </OrganizationGroup>
             <LinkGroup>
                 <Link to="/">Home</Link>
