@@ -14,6 +14,9 @@ import module1_img from "/assets/courses/course_1/module_1.png";
 import module2_img from "/assets/courses/course_1/module_2.png";
 import module3_img from "/assets/courses/course_1/module_3.png";
 import module4_img from "/assets/courses/course_1/module_4.png";
+import card1_img from "/assets/courses/course_1/card1.png";
+import card2_img from "/assets/courses/course_1/card2.png";
+
 
 function CourseDetails() {
   return (
@@ -56,7 +59,9 @@ function CourseDetails() {
         </BulletPoints>
         <CardsSection>
           <span></span>
-          <div>
+          <img src={card2_img} alt="break the chains" />
+          <img src={card1_img} alt="photo realism" />
+          {/* <div>
             <h1>Photo Realism is not Realism</h1>
           </div>
           <div>
@@ -66,7 +71,7 @@ function CourseDetails() {
               aliquip ex ea commodo consequat. Duis aute irure dolor in
               reprehenderit in voluptate
             </p>
-          </div>
+          </div> */}
         </CardsSection>
 
         <Ribbon>
@@ -147,6 +152,7 @@ function CourseDetails() {
         <SquareImg src={module3_img} />
 
         <Ribbon>
+          <span></span>
           <h1>
             <strong>MODULE 4: </strong> Tips and tricks for workflow and Scene
             Optimization

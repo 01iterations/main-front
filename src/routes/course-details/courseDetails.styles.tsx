@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CourseDetailsWrapper = styled.div`
-padding-bottom: 7vh;
+  padding-bottom: 7vh;
   background-color: #1b1c1e;
   height: 100%;
   flex: 1;
@@ -12,7 +12,7 @@ padding-bottom: 7vh;
 `;
 export const CenterWrapper = styled.div`
   padding-top: 8vh;
-  width: 60%;
+  width: 65%;
   background-color: #1b1c1e;
 
   display: flex;
@@ -21,6 +21,10 @@ export const CenterWrapper = styled.div`
   /* justify-content: center; */
   /* padding-top: 20px; */
   gap: 20px;
+
+  @media (max-width: 768px) {
+    width: 95%;
+  }
 `;
 
 export const SquareImg = styled.img`
@@ -28,7 +32,7 @@ export const SquareImg = styled.img`
 `;
 
 export const Paragraph = styled.p`
-  color: #fcfcfc;
+  color: rgba(255, 255, 255, 0.8);
   font-family: provan-book-italic;
 `;
 
@@ -36,22 +40,30 @@ export const Ribbon = styled.div`
   font-family: caslon;
   padding: 10px 0px;
   background-color: rgba(0, 0, 0, 0.15);
-  width: calc(100vw - 20px);
+  width: 153.4%;
   display: flex;
   justify-content: center;
   h1 {
-    width: 50%;
+    width: 65%;
     color: white;
     strong {
       color: #f37229;
     }
   }
+  @media (max-width: 768px) {
+    width: 99vw;
+    h1 {
+      font-size: 1.5em;
+      width: 95%;
+    }
+  }
 `;
 
 export const BulletPoints = styled.ul`
-  color: #fcfcfc;
+  color: rgba(255, 255, 255, 0.8);
   align-self: flex-start;
   font-family: provan-book;
+  padding-left: 20px;
 `;
 
 export const CardsSection = styled.div`
@@ -66,6 +78,11 @@ export const CardsSection = styled.div`
     height: 300px;
     background-color: white;
   }
+  img {
+    z-index: 2;
+    width: 45%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
   span {
     position: absolute;
     z-index: 1;
@@ -79,7 +96,7 @@ export const CardsSection = styled.div`
 export const ApplyBtn = styled.button`
   font-family: franklin-gothic;
   color: #f37229;
-  padding:10px;
+  padding: 10px;
   background-color: transparent;
   &:hover {
     filter: brightness(0.8);

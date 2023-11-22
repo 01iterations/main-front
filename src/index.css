@@ -16,35 +16,35 @@ body {
 
 @font-face {
     font-family: caslon;
-    src: url('./assets/fonts/Caslon-Titling-MT-W01.ttf');
+    src: url('/assets/fonts/Caslon-Titling-MT-W01.ttf');
 }
 
 @font-face {
     font-family: avenir;
-    src: url('./assets/fonts/Avenir-Light.ttf');
+    src: url('/assets/fonts/Avenir-Light.ttf');
 }
 
 @font-face {
     font-family: playfair;
-    src: url('./assets/fonts/PlayfairDisplay-VariableFont_wght.ttf');
+    src: url('/assets/fonts/PlayfairDisplay-VariableFont_wght.ttf');
 }
 
 @font-face {
     font-family: franklin-gothic;
-    src: url('./assets/fonts/Franklin-Gothic-Std-Extra-Condensed.otf');
+    src: url('/assets/fonts/Franklin-Gothic-Std-Extra-Condensed.otf');
 }
 
 @font-face {
     font-family: provan-book;
-    src: url('./assets/fonts/Provan-Book.otf');
+    src: url('/assets/fonts/Provan-Book.otf');
 }
 
 @font-face {
     font-family: provan-book-italic;
-    src: url('./assets/fonts/Provan-BookItalic.otf');
+    src: url('/assets/fonts/Provan-BookItalic.otf');
 }
 
 @font-face {
     font-family: provan-regular;
-    src: url('./assets/fonts/Provan-Regular.otf');
+    src: url('/assets/fonts/Provan-Regular.otf');
 }
