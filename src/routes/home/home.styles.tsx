@@ -6,6 +6,9 @@ export const HomeContainer = styled.div`
 `;
 export const AnimationSection = styled.div`
   width: 70%;
+  @media (max-width: 425px) {
+    display: none;
+  }
 `;
 export const HomeNav = styled.div`
   width: 30%;
@@ -15,6 +18,11 @@ export const HomeNav = styled.div`
   align-items: center;
   justify-content: center;
   gap: 50px;
+  @media (max-width: 425px) {
+    width: 100%;
+    height: 100vh;
+    /* overflow: hidden */
+  }
 `;
 
 export const Logo = styled.img`
@@ -32,7 +40,7 @@ export const NavItems = styled.div`
     font-family: caslon;
     color: rgba(255, 255, 255, 0.8);
     &:hover {
-        opacity: 0.8;
+      opacity: 0.8;
     }
   }
 `;
