@@ -43,7 +43,7 @@ function Nav() {
                 <MenuItem to="/">Home</MenuItem>
                 <MenuItem to="/projects">Projects</MenuItem>
                 {featureBlock &&<MenuItem to="/">About</MenuItem>}
-                <MenuItem to="/">Courses</MenuItem>
+                <MenuItem to="/courses">Courses</MenuItem>
                 {featureBlock &&<MenuItem to="/">Services</MenuItem>}
                 {featureBlock &&<MenuItem to="/">Contact</MenuItem>}
             </Menu>

@@ -21,7 +21,6 @@ export const HomeNav = styled.div`
   @media (max-width: 425px) {
     width: 100%;
     height: 100vh;
-    /* overflow: hidden */
   }
 `;
 
