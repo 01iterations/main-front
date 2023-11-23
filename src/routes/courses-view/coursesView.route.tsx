@@ -6,6 +6,7 @@ import {
   CoursesViewWrapper,
 } from "./coursesView.styles";
 import course1_thumbnail from "/assets/courses/course_1/thumbnail.jpg";
+import course2_thumbnail from "/assets/courses/course_2/thumbnail.jpg";
 import LoadingData from "../../components/LoadingData/LoadingData.component";
 import useLoading from "../../hooks/useLoading.hook";
 function CoursesView() {
@@ -24,7 +25,7 @@ function CoursesView() {
           onClick={() => navigate("/courses/1")}
         />
         <CourseCard
-          src={course1_thumbnail}
+          src={course2_thumbnail}
           alt="Workflow with Corona"
           onClick={() => navigate("/courses/1")}
         />
