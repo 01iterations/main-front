@@ -7,7 +7,7 @@ export const CoursesViewWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding-top: 10vh; */
+  padding-top: 8vh;
 `;
 
 export const CourseCenterWrapper = styled.div`
