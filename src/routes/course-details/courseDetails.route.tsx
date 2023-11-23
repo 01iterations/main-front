@@ -25,7 +25,7 @@ function CourseDetails() {
       <Nav />
       <CenterWrapper>
       <ImgSection>
-        <span></span>
+        {/* <span></span> */}
         <SquareImg src={cover} />
         </ImgSection>
         <Paragraph>
@@ -93,7 +93,7 @@ function CourseDetails() {
           </li>
         </BulletPoints>
         <ImgSection>
-        <span></span>
+        {/* <span></span> */}
         <SquareImg src={module1_img} />
         </ImgSection>
         <Ribbon>
@@ -120,7 +120,7 @@ function CourseDetails() {
           </li>
         </BulletPoints>
         <ImgSection>
-        <span></span>
+        {/* <span></span> */}
         <SquareImg src={module2_img} />
         </ImgSection>
 
@@ -150,7 +150,7 @@ function CourseDetails() {
           </li>
         </BulletPoints>
         <ImgSection>
-        <span></span>
+        {/* <span></span> */}
         <SquareImg src={module3_img} />
         </ImgSection>
 

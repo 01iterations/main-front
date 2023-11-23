@@ -52,6 +52,7 @@ export const SquareImg = styled.img`
 export const Paragraph = styled.p`
   color: rgba(255, 255, 255, 0.8);
   font-family: provan-book-italic;
+  font-size: 1.3em;
 `;
 
 export const Ribbon = styled.div`
@@ -88,6 +89,7 @@ export const BulletPoints = styled.ul`
   align-self: flex-start;
   font-family: provan-book;
   padding-left: 20px;
+  font-size: 1.1em;
 `;
 
 export const CardsSection = styled.div`
