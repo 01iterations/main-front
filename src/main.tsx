@@ -21,7 +21,7 @@ const router = createHashRouter([
         element: <Projects />,
     },
     {
-        path: "/course/1",
+        path: "/courses/1",
         element: <CourseDetails />,
     },{
         path:"/courses",

@@ -12,8 +12,8 @@ function CoursesView() {
     <CoursesViewWrapper>
         <Nav />
       <CourseCenterWrapper>
-        <CourseCard src={course1_thumbnail} alt="Workflow with Corona" onClick={() => navigate("/course/1")}/>
-        <CourseCard src={course1_thumbnail} alt="Workflow with Corona" onClick={() => navigate("/course/1")} />
+        <CourseCard src={course1_thumbnail} alt="Workflow with Corona" onClick={() => navigate("/courses/1")}/>
+        <CourseCard src={course1_thumbnail} alt="Workflow with Corona" onClick={() => navigate("/courses/1")} />
       </CourseCenterWrapper>
     </CoursesViewWrapper>
   );
