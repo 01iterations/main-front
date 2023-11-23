@@ -6,6 +6,7 @@ export const HomeContainer = styled.div`
 `;
 export const AnimationSection = styled.div`
   width: 70%;
+  height: 100vh;
   @media (max-width: 425px) {
     display: none;
   }
