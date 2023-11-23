@@ -36,6 +36,7 @@ export const Paragraph = styled.p`
   font-family: provan-book-italic;
 `;
 
+
 export const Ribbon = styled.div`
   font-family: caslon;
   padding: 10px 0px;
@@ -97,8 +98,9 @@ export const CardsSection = styled.div`
   }
 `;
 
-export const ApplyBtn = styled.button`
+export const ApplyBtn = styled.h1`
   font-family: franklin-gothic;
+  font-size: 3em;
   color: #f37229;
   padding: 10px;
   background-color: transparent;
