@@ -5,6 +5,7 @@ import {
   CardsSection,
   CenterWrapper,
   CourseDetailsWrapper,
+  ImgSection,
   Paragraph,
   Ribbon,
   SquareImg,
@@ -23,7 +24,10 @@ function CourseDetails() {
     <CourseDetailsWrapper>
       <Nav />
       <CenterWrapper>
+      <ImgSection>
+        <span></span>
         <SquareImg src={cover} />
+        </ImgSection>
         <Paragraph>
           The “Architectural Visualization with Corona Renderer” course offered
           by 01 Iterations is a comprehensive program designed to equip
@@ -88,7 +92,10 @@ function CourseDetails() {
             blur for effective visualization.
           </li>
         </BulletPoints>
+        <ImgSection>
+        <span></span>
         <SquareImg src={module1_img} />
+        </ImgSection>
         <Ribbon>
           <h2>
             <strong>MODULE 2: </strong> Introduction to Natural and Artificial
@@ -112,7 +119,10 @@ function CourseDetails() {
             switch to achieve desired lighting effects.
           </li>
         </BulletPoints>
+        <ImgSection>
+        <span></span>
         <SquareImg src={module2_img} />
+        </ImgSection>
 
         <Ribbon>
           <h2>
@@ -139,7 +149,10 @@ function CourseDetails() {
             Corona Layered Material, and Mix techniques.
           </li>
         </BulletPoints>
+        <ImgSection>
+        <span></span>
         <SquareImg src={module3_img} />
+        </ImgSection>
 
         <Ribbon>
           <span></span>
@@ -170,7 +183,10 @@ function CourseDetails() {
             Studio Max interface for effective scene optimization.
           </li>
         </BulletPoints>
+        <ImgSection>
+        <span></span>
         <SquareImg src={module4_img} />
+        </ImgSection>
         <Paragraph style={{textDecoration: 'underline'}}>
           Basic knowledge of 3D modeling and visualization concepts is strongly
           recommended Familiarity with 3ds Studio Max interface is strongly

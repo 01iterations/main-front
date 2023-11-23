@@ -27,15 +27,32 @@ export const CenterWrapper = styled.div`
   }
 `;
 
+export const ImgSection = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  position: relative;
+  span {
+    position: absolute;
+    z-index: 1;
+    width: calc(100vw - 20px);
+    height: 10vw;
+    top: 42.5%;
+    background-color: #f37229;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+`;
 export const SquareImg = styled.img`
   width: 100%;
+  z-index:10;
 `;
 
 export const Paragraph = styled.p`
   color: rgba(255, 255, 255, 0.8);
   font-family: provan-book-italic;
 `;
-
 
 export const Ribbon = styled.div`
   font-family: caslon;
@@ -44,7 +61,8 @@ export const Ribbon = styled.div`
   width: 153.4%;
   display: flex;
   justify-content: center;
-  h1, h2 {
+  h1,
+  h2 {
     width: 40%;
     margin-left: -25%;
     color: white;
@@ -56,7 +74,8 @@ export const Ribbon = styled.div`
     width: 99vw;
     justify-content: flex-start;
     padding-left: 20px;
-    h1,h2 {
+    h1,
+    h2 {
       font-size: 1.5em;
       width: 75%;
       margin-left: 0;
