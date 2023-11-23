@@ -61,24 +61,14 @@ function CourseDetails() {
           <span></span>
           <img src={card2_img} alt="break the chains" />
           <img src={card1_img} alt="photo realism" />
-          {/* <div>
-            <h1>Photo Realism is not Realism</h1>
-          </div>
-          <div>
-            <h1>Break the Chains of your medium</h1>
-            <p>
-              minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate
-            </p>
-          </div> */}
+
         </CardsSection>
 
         <Ribbon>
-          <h1>
+          <h2>
             <strong>MODULE 1: </strong> Introduction to Corona Renderer / Camera
             And Composition
-          </h1>
+          </h2>
         </Ribbon>
         <BulletPoints>
           <li>
@@ -100,10 +90,10 @@ function CourseDetails() {
         </BulletPoints>
         <SquareImg src={module1_img} />
         <Ribbon>
-          <h1>
+          <h2>
             <strong>MODULE 2: </strong> Introduction to Natural and Artificial
             Lighting
-          </h1>
+          </h2>
         </Ribbon>
         <BulletPoints>
           <li>
@@ -125,10 +115,10 @@ function CourseDetails() {
         <SquareImg src={module2_img} />
 
         <Ribbon>
-          <h1>
+          <h2>
             <strong>MODULE 3: </strong> Introduction to material analysis and
             creation
-          </h1>
+          </h2>
         </Ribbon>
         <BulletPoints>
           <li>
@@ -153,10 +143,10 @@ function CourseDetails() {
 
         <Ribbon>
           <span></span>
-          <h1>
+          <h2>
             <strong>MODULE 4: </strong> Tips and tricks for workflow and Scene
             Optimization
-          </h1>
+          </h2>
         </Ribbon>
         <BulletPoints>
           <li>

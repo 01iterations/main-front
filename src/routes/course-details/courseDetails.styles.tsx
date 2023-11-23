@@ -43,8 +43,9 @@ export const Ribbon = styled.div`
   width: 153.4%;
   display: flex;
   justify-content: center;
-  h1 {
-    width: 65%;
+  h1, h2 {
+    width: 40%;
+    margin-left: -25%;
     color: white;
     strong {
       color: #f37229;
@@ -52,9 +53,12 @@ export const Ribbon = styled.div`
   }
   @media (max-width: 768px) {
     width: 99vw;
-    h1 {
+    justify-content: flex-start;
+    padding-left: 20px;
+    h1,h2 {
       font-size: 1.5em;
-      width: 95%;
+      width: 75%;
+      margin-left: 0;
     }
   }
 `;
