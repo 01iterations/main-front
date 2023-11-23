@@ -10,10 +10,13 @@ import { useEffect, useState } from "react";
 import { projectSlides } from "../../types/projects";
 import Nav from "../../components/Nav/nav.component";
 import { ProjectCard } from "../../components/ProjectCard/projectCard.component";
+import LoadingData from "../../components/LoadingData/LoadingData.component";
+import useLoading from "../../hooks/useLoading.hook";
 
 export function Projects() {
     const [slides, setSlides] = useState<projectSlides[]>([]);
     const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
+    const Loading = useLoading(3500);
     const breakpoint = 768; // breakpoint for mobile/desktop view
 
     useEffect(() => {
@@ -41,6 +44,9 @@ export function Projects() {
             setSlides(slideDataDesktop);
         }
     }, [screenWidth]);
+    if(Loading){
+        return <LoadingData isLoading={Loading} />
+    }
     return (
         <>
             <Nav />

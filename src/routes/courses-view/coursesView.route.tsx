@@ -10,9 +10,8 @@ import LoadingData from "../../components/LoadingData/LoadingData.component";
 import useLoading from "../../hooks/useLoading.hook";
 function CoursesView() {
   const navigate = useNavigate();
-  const Loading = useLoading(3000);
+  const Loading = useLoading(2000);
   if(Loading){
-    console.warn("Here we are")
     return <LoadingData isLoading={Loading} />
   }
   return (
