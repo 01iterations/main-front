@@ -171,7 +171,7 @@ function CourseDetails() {
           </li>
         </BulletPoints>
         <SquareImg src={module4_img} />
-        <Paragraph>
+        <Paragraph style={{textDecoration: 'underline'}}>
           Basic knowledge of 3D modeling and visualization concepts is strongly
           recommended Familiarity with 3ds Studio Max interface is strongly
           recommended. By the end of this course, participants will have honed
@@ -181,7 +181,7 @@ function CourseDetails() {
           visualization.
         </Paragraph>
         <ApplyBtn>
-          <h1>Enroll Now</h1>
+          Enroll Now
         </ApplyBtn>
       </CenterWrapper>
     </CourseDetailsWrapper>
