@@ -5,15 +5,15 @@ export const HomeContainer = styled.div`
   display: flex;
 `;
 export const AnimationSection = styled.div`
-  width: 70%;
+  width: 60%;
   height: 100vh;
   @media (max-width: 768px) {
     display: none;
   }
 `;
 export const HomeNav = styled.div`
-  width: 30%;
-  background-color: #1b1c1e;
+  width: 40%;
+  background-color: #000;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,8 +27,8 @@ export const HomeNav = styled.div`
 
 export const Logo = styled.img`
   color: white;
-  width: 60%;
-  object-fit: contain;
+  width: 50%;
+  object-fit: cover;
 `;
 
 export const NavItems = styled.div`
