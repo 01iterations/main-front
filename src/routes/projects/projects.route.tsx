@@ -1,5 +1,5 @@
 import {
-    ProjectCotainer,
+    ProjectContainer,
     ProjectsGrid,
     StyledCarousel,
 } from "./projects.style";
@@ -50,7 +50,7 @@ export function Projects() {
     return (
         <>
             <Nav />
-            <ProjectCotainer>
+            <ProjectContainer>
                 <StyledCarousel fade>
                     {slides.map((slide, index) => (
                         <Carousel.Item key={index}>
@@ -72,7 +72,7 @@ export function Projects() {
                         />
                     ))}
                 </ProjectsGrid>
-            </ProjectCotainer>
+            </ProjectContainer>
         </>
     );
 }
