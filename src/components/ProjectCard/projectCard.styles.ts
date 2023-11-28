@@ -30,7 +30,7 @@ const fadeIn = keyframes`
 export const ProjectCardContainer = styled.div`
     /* border-radius: 15px; */
     overflow: hidden;
-    max-height: 30vh;
+    max-height: 60vh;
     margin: 0;
     padding: 0;
     position: relative;
@@ -42,6 +42,7 @@ export const ProjectCardContainer = styled.div`
     }
 
     @media ${devices.medium} {
+        max-height: 30vh;
     }
 `;
 
