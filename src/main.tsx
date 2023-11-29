@@ -21,12 +21,12 @@ const router = createHashRouter([
         element: <Projects />,
     },
     {
-        path: "/courses/1",
+        path: "/courses/:courseNum",
         element: <CourseDetails />,
     },{
         path:"/courses",
         element: <CoursesView />
-    }
+        }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
