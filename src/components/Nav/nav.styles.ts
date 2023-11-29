@@ -26,7 +26,7 @@ export const devices = {
 export const Navbar = styled.div`
     position: absolute;
     top: 0;
-    z-index: 9;
+    z-index: 900;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
