@@ -26,8 +26,8 @@ function CoursesView() {
         />
         <CourseCard
           src={course2_thumbnail}
-          alt="Workflow with Corona"
-          onClick={() => navigate("/courses/1")}
+          alt="Volumetrix expert with corona"
+          onClick={() => navigate("/courses/2")}
         />
       </CourseCenterWrapper>
     </CoursesViewWrapper>
