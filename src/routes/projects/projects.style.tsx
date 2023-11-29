@@ -27,12 +27,12 @@ export const ProjectContainer = styled.div`
 `;
 
 export const StyledCarousel = styled(Carousel)`
-  height: 92vh;
+  height: 100vh;
   /* object-position: center; */
   /* object-fit: cover; */
-  margin-top: 8vh;
+  /* margin-top: 8vh; */
   .carousel-inner {
-    height: 92vh;
+    height: 100vh;
     object-position: center;
     object-fit: cover;
     display: flex;
@@ -40,7 +40,7 @@ export const StyledCarousel = styled(Carousel)`
   }
 
   & img {
-    height: 92vh;
+    height: 100vh;
     object-fit: cover;
   }
   /* background-position: center; */
