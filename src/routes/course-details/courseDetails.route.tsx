@@ -17,6 +17,7 @@ function CourseDetails() {
 
   useEffect(() => {
     if (courseNum && courseDataArr && courseDataArr[Number(courseNum) - 1]) {
+      console.log(courseDataArr[Number(courseNum) - 1]);
       setCourseData(courseDataArr[Number(courseNum) - 1]);
     }
   }, [courseNum]);
