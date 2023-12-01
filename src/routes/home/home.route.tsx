@@ -44,8 +44,11 @@ function Home() {
         <Logo src={HomeNavLogo} />
         <NavItems>
           <h3 onClick={() => navigate("/")}>Home</h3>
-          <h3 onClick={() => navigate("/projects")}>Project</h3>
+          <h3 onClick={() => navigate("/projects")}>Projects</h3>
           <h3 onClick={() => navigate("/courses")}>Courses</h3>
+          <h3 onClick={() => navigate("/about")}>About</h3>
+          {/* <h3 onClick={() => navigate("/")}>Contact</h3> */}
+
         </NavItems>
       </HomeNav>
     </HomeContainer>

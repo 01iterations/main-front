@@ -18,8 +18,8 @@ export const HomeNav = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding-top: 30px;
+  gap: 30px;
+  padding-top: 60px;
   @media (max-width: 768px) {
     width: 100%;
     height: 100vh;
@@ -36,7 +36,7 @@ export const NavItems = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
   h3 {
     font-family: caslon;
     color: rgba(255, 255, 255, 0.8);
