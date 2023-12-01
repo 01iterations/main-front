@@ -9,12 +9,13 @@ export const CourseDetailsWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 `;
 export const CenterWrapper = styled.div`
   padding-top: 8vh;
   width: 65%;
   background-color: #1b1c1e;
-
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -129,3 +130,4 @@ export const ApplyBtn = styled.h1`
     filter: brightness(0.8);
   }
 `;
+

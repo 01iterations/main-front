@@ -17,7 +17,8 @@ export type CourseType = {
     modules: CourseModuleType[],
     prerequisites: string[],
     deliverable: string,
-    participantsWork: string[],
+    participantsWork?: string[],
+    feedback?: FeedBackType[],
     price: string;
     currency: string;
 }
