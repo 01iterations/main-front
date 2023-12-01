@@ -82,7 +82,6 @@ export const course2Data: CourseType = {
     ],
     deliverable:
       "By the end of this workshop, participants will have a comprehensive understanding of volumetrics and atmospheric effects, enabling them to create visually stunning and atmospheric architectural visualizations using Corona Renderer. They will gain practical skills in utilizing volumetric materials and global volumetric effects to elevate the realism and immersive experience of their rendered scenes.",
-    participantsWork: [], // Placeholder for participant work
     price: "", // Add pricing information if available
     currency: "", // Add currency information if available
   };

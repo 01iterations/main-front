@@ -4,23 +4,24 @@ import {
   ParticipantWorkWrapper,
   RightSideImgs,
 } from "./ParticipantWorkSection.styles";
-import test_img from "/assets/Carousel/slide2.jpg";
-const ParticipantWorkSection = () => {
+
+export type ParticipantWorkSectionProps = {
+  sources: string[];
+};
+const ParticipantWorkSection = ({ sources }: ParticipantWorkSectionProps) => {
   return (
     <>
       <Ribbon type="AfterCourse" title="Participant Work" />
       <ParticipantWorkWrapper>
         <LeftSideImgs>
-          <img src={test_img} alt="" />
-          <img src={test_img} alt="" />
+            {sources.slice(0,2).map((source, index) => (
+              <img key={index} src={source} alt="" />
+            ))}
         </LeftSideImgs>
         <RightSideImgs>
-          <img src={test_img} alt="" />
-          <img src={test_img} alt="" />
-          <img src={test_img} alt="" />
-          <img src={test_img} alt="" />
-          <img src={test_img} alt="" />
-          <img src={test_img} alt="" />
+            {sources.slice(2).map((source, index) => (
+              <img key={index} src={source} alt="" />
+            ))}
         </RightSideImgs>
       </ParticipantWorkWrapper>
     </>

@@ -26,6 +26,14 @@ export const FeedbackWrapper = styled.div`
 `;
 export const FeedbackParagraph = styled.p`
   color: rgba(255, 255, 255, 0.8);
+  font-size: 1.2em;
+  @media (max-width: 466px) {
+    font-size: 0.8em;
+  }
+`;
+
+export const WhiteParagraph = styled.p`
+  color: rgba(255, 255, 255, 0.8);
 `;
 
 export const AuthorSection = styled.div`
@@ -54,14 +62,28 @@ export const PersonalInfo = styled.div`
     /* font-weight: bold; */
     opacity: 0.7;
   }
+  @media (max-width: 466px) {
+    p:nth-child(1) {
+      font-size: 1em;
+    }
+    p:nth-child(2) {
+      font-size: 0.6em;
+    }
+  }
 `;
 
 export const AuthorAvatar = styled(Avatar)`
-&.MuiAvatar-root{
-  width: 70px;
-  height: 70px;
-}
+  &.MuiAvatar-root {
+    width: 70px;
+    height: 70px;
+  }
 
+  @media (max-width: 466px) {
+    &.MuiAvatar-root {
+      width: 50px;
+      height: 50px;
+    }
+  }
 `;
 
 export const RatingSection = styled.div`

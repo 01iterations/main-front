@@ -7,6 +7,14 @@ import module4_img from "/assets/courses/course_1/module_4.png";
 import card1_img from "/assets/courses/course_1/card1.png";
 import card2_img from "/assets/courses/course_1/card2.png";
 
+import participant_work_1 from "/assets/courses/course_1/participant-work/1.jpeg";
+import participant_work_2 from "/assets/courses/course_1/participant-work/2.jpeg";
+import participant_work_3 from "/assets/courses/course_1/participant-work/3.jpeg";
+import participant_work_4 from "/assets/courses/course_1/participant-work/4.jpeg";
+import participant_work_5 from "/assets/courses/course_1/participant-work/5.jpeg";
+import participant_work_6 from "/assets/courses/course_1/participant-work/6.jpeg";
+// import participant_work_7 from "/assets/courses/course_1/participant-work/7.jpeg";
+
 
 
 
@@ -95,7 +103,38 @@ export const course1Data: CourseType = {
   ],
   deliverable:
     "By the end of this course, participants will have honed their skills in using Corona Renderer, creating compelling compositions, mastering lighting techniques, applying materials effectively, and optimizing scenes for efficient architectural visualization.",
-  participantsWork: [],
+  participantsWork: [
+    participant_work_1,
+    participant_work_2,
+    participant_work_3,
+    participant_work_4,
+    participant_work_5,
+    participant_work_6,
+    // participant_work_7,
+  ],
+  feedback: [
+    {
+      authorName: "Mohamed Shahin",
+      authorImg: "",
+      authorJobTitle: "Mohamed.shahine15@gmail.com",
+      rating: 5,
+      feedback: "A great course with the artist Ahmed Fahmy, I learned a lot about the camera, lighting and the extent of their impact on the spaces and how to get to the mood I want the result was fantastic",
+    },
+    {
+      authorName: "Mohamed Hesham",
+      authorImg: "",
+      authorJobTitle: "Mohamadhesham324@gmail.com",
+      rating: 5,
+      feedback: "A very thorough course explaining the entire rendering workflow. The technical and theoretical parts were equally beneficial and I would recommend for anyone looking to learn corona rendering",
+    },
+    {
+      authorName: "Mahmoud Wael",
+      authorImg: "",
+      authorJobTitle: "Mahmoud_wael@outlook.com",
+      rating: 5,
+      feedback:"The course was very informative in terms of  how to create high quality renders. Learnt how to create realistic materials, adjust shots lighting and how it could affect the over shot mood, and finally the importance of the camera positioning on the shot quality "
+    }
+  ],
   price: "", // Add pricing information if available
   currency: "", // Add currency information if available
 };
