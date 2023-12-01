@@ -70,7 +70,7 @@ export const AboutText = styled.div`
   align-items: center;
   width: 60%;
   max-height: 100vh; /* Set a maximum height relative to the viewport */
-  overflow-y: auto; /* Enable vertical scrolling when content overflows */
+  /* overflow-y: auto; Enable vertical scrolling when content overflows */
   gap: 20px;
   padding: 50px 0; /* Adjust padding as needed */
   box-sizing: border-box; /* Include padding in the total width/height */
