@@ -1,7 +1,7 @@
 import { CourseType } from "../../types/courseDetails";
 import cover_img from "/assets/courses/course_2/cover.png";
-import module1_img from "/assets/courses/course_2/1.png";
-import module2_img from "/assets/courses/course_2/2.jpg";
+import module1_img from "/assets/courses/course_2/2.jpg";
+import module2_img from "/assets/courses/course_2/1.png";
 import module3_img from "/assets/courses/course_2/3.jpg";
 import module4_img from "/assets/courses/course_2/4.jpg";
 import module5_img from "/assets/courses/course_2/5.jpg";
