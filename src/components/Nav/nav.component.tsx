@@ -29,7 +29,7 @@ function Nav() {
             <LinkGroup>
                 <Link to="/">Home</Link>
                 <Link to="/projects">Projects</Link>
-                {featureBlock && <Link to="/">About</Link>}
+                <Link to="/about">About</Link>
                 <Link to="/courses">Courses</Link>
                 {featureBlock &&<Link to="/">Services</Link>}
                 {featureBlock &&<Link to="/contact">Contact</Link>}
@@ -42,7 +42,7 @@ function Nav() {
             <Menu show={showMenu}>
                 <MenuItem to="/">Home</MenuItem>
                 <MenuItem to="/projects">Projects</MenuItem>
-                {featureBlock &&<MenuItem to="/">About</MenuItem>}
+                <MenuItem to="/about">About</MenuItem>
                 <MenuItem to="/courses">Courses</MenuItem>
                 {featureBlock &&<MenuItem to="/">Services</MenuItem>}
                 {featureBlock &&<MenuItem to="/">Contact</MenuItem>}
