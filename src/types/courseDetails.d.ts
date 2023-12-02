@@ -19,6 +19,7 @@ export type CourseType = {
     deliverable: string,
     participantsWork?: string[],
     feedback?: FeedBackType[],
+    link?: string,
     price: string;
     currency: string;
 }

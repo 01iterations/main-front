@@ -202,6 +202,7 @@ export const course1Data: CourseType = {
       feedback:"The course was explained in an easy and clear way. Also, it changed the way i look at details around us in real life to apply it through renders and visualization."
     }
   ],
+  link: "https://docs.google.com/forms/d/e/1FAIpQLSc-lvlKAyFou2Y36LOWMYkQ-veHtIW44mY8QdRGq3uAUwhSHw/viewform?usp=sharing",
   price: "", // Add pricing information if available
   currency: "", // Add currency information if available
 };

@@ -78,15 +78,21 @@ function CourseDetails() {
 
         {courseData?.feedback && (
           <>
-          <FeedbackSection feedbacks={courseData.feedback}/>
+            <FeedbackSection feedbacks={courseData.feedback} />
           </>
         )}
 
         {courseData?.participantsWork && (
-          <ParticipantWorkSection sources={courseData.participantsWork}/>
+          <ParticipantWorkSection sources={courseData.participantsWork} />
         )}
 
-        <ApplyBtn>Enroll Now</ApplyBtn>
+        <ApplyBtn
+          onClick={() =>
+            window.open(courseData?.link ? courseData.link : "", "_blank")
+          }
+        >
+          Enroll Now
+        </ApplyBtn>
       </CenterWrapper>
     </CourseDetailsWrapper>
   );
