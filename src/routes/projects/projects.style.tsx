@@ -58,7 +58,7 @@ export const ProjectsGrid = styled.div`
   height: 100%;
   /* background-color: black; */
 
-  > *:nth-child(5n) {
+  > *:nth-child(3) {
     grid-column: span 2!important;
   }
 `;

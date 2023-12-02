@@ -4,7 +4,6 @@ import {
     StyledCarousel,
 } from "./projects.style";
 import Carousel from "react-bootstrap/Carousel";
-import slideDataMobile from "./projects-mobile.json";
 import slideDataDesktop from "./projects-desktop.json";
 import { useEffect, useState } from "react";
 import { projectSlides } from "../../types/projects";
@@ -12,38 +11,29 @@ import Nav from "../../components/Nav/nav.component";
 import { ProjectCard } from "../../components/ProjectCard/projectCard.component";
 import LoadingData from "../../components/LoadingData/LoadingData.component";
 import useLoading from "../../hooks/useLoading.hook";
+import SlideShowArr from './slideshow.json';
+
 
 export function Projects() {
     const [slides, setSlides] = useState<projectSlides[]>([]);
-    const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
+    const [slideShow, setSlideShow] = useState<projectSlides[]>([]);
     const Loading = useLoading(3500);
-    const breakpoint = 768; // breakpoint for mobile/desktop view
+    
+    function shuffleArray(arr: projectSlides[]) {
+        const shuffled = arr.map((value) => ({ value, sort: Math.random() }));
+        const shuffledIndexes = shuffled.sort(() => Math.random() - 0.5);
+        return shuffledIndexes.map(({ value }) => value);
+      }
 
-    useEffect(() => {
-        // function to update screen width
-        const handleResize = () => {
-            setScreenWidth(window.innerWidth);
-        };
-        // add window resize event listener on mount
-        window.addEventListener("resize", handleResize);
-        // remove window resize event listener on unmount
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
 
     useEffect(() => {
         // conditional rendering of slide data based on screen width
-        console.warn({ breakpoint, screenWidth });
 
-        if (screenWidth < breakpoint) {
-            // mobile view
-            setSlides(slideDataMobile);
-        } else {
-            // desktop view
             setSlides(slideDataDesktop);
-        }
-    }, [screenWidth]);
+            setSlideShow(shuffleArray(SlideShowArr));
+
+        
+    }, []);
     if(Loading){
         return <LoadingData isLoading={Loading} />
     }
@@ -52,11 +42,10 @@ export function Projects() {
             <Nav />
             <ProjectContainer>
                 <StyledCarousel fade>
-                    {slides.map((slide, index) => (
+                    {slideShow.map((slide, index) => (
                         <Carousel.Item key={index}>
                             <img
                                 className="d-block w-100 cut"
-                                // id={slide.id !== undefined ? slide.id : undefined}
                                 src={slide.src}
                                 alt={index + "slide"}
                             />
@@ -67,8 +56,9 @@ export function Projects() {
                     {slides.map((slide: projectSlides, index: number) => (
                         <ProjectCard
                             key={index}
-                            courseTitle={slide.quote.title}
+                            courseTitle={slide.quote ? slide.quote.title : ''}
                             thumbnail={slide.src}
+                            projectNum={slide.num ? slide.num: 0}
                         />
                     ))}
                 </ProjectsGrid>

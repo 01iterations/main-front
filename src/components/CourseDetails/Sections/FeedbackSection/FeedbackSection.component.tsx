@@ -27,7 +27,7 @@ export const FeedbackSection = ({ feedbacks }: FeedbackSectionProps) => {
   );
   return (
     <>
-      <Ribbon type="AfterCourse" title="Participants Feedback" />
+      <Ribbon type="AfterCourse" title="Participants' Feedback" />
       {/* <input type="text" /> */}
       <FeedbackCurrentSlide>{getCurrentSlide()}
       <ButtonSection>

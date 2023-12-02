@@ -7,12 +7,25 @@ import module4_img from "/assets/courses/course_1/module_4.png";
 import card1_img from "/assets/courses/course_1/card1.png";
 import card2_img from "/assets/courses/course_1/card2.png";
 
-import participant_work_1 from "/assets/courses/course_1/participant-work/1.jpeg";
+import participant_work_1 from "/assets/courses/course_1/participant-work/1.jpg";
 import participant_work_2 from "/assets/courses/course_1/participant-work/2.jpeg";
-import participant_work_3 from "/assets/courses/course_1/participant-work/3.jpeg";
+import participant_work_3 from "/assets/courses/course_1/participant-work/5.jpeg";
 import participant_work_4 from "/assets/courses/course_1/participant-work/4.jpeg";
-import participant_work_5 from "/assets/courses/course_1/participant-work/5.jpeg";
+import participant_work_5 from "/assets/courses/course_1/participant-work/7.png";
 import participant_work_6 from "/assets/courses/course_1/participant-work/6.jpeg";
+import participant_work_7 from "/assets/courses/course_1/participant-work/3.jpeg";
+import participant_work_8 from "/assets/courses/course_1/participant-work/8.jpg";
+import participant_work_9 from "/assets/courses/course_1/participant-work/9.jpg";
+import participant_work_10 from "/assets/courses/course_1/participant-work/10.jpg";
+import participant_work_11 from "/assets/courses/course_1/participant-work/11.jpg";
+import participant_work_12 from "/assets/courses/course_1/participant-work/12.jpg";
+import participant_work_13 from "/assets/courses/course_1/participant-work/13.jpg";
+import participant_work_14 from "/assets/courses/course_1/participant-work/14.jpg";
+import participant_work_15 from "/assets/courses/course_1/participant-work/15.jpg";
+import participant_work_16 from "/assets/courses/course_1/participant-work/16.jpg";
+import participant_work_17 from "/assets/courses/course_1/participant-work/17.jpg";
+import participant_work_18 from "/assets/courses/course_1/participant-work/18.jpg";
+
 // import participant_work_7 from "/assets/courses/course_1/participant-work/7.jpeg";
 
 
@@ -106,14 +119,33 @@ export const course1Data: CourseType = {
   participantsWork: [
     participant_work_1,
     participant_work_2,
+    participant_work_7,
+    participant_work_6,
     participant_work_3,
     participant_work_4,
     participant_work_5,
-    participant_work_6,
-    // participant_work_7,
+    participant_work_8,
+    participant_work_9,
+    participant_work_10,
+    participant_work_11,
+    participant_work_12,
+    participant_work_13,
+    participant_work_14,
+    participant_work_15,
+    participant_work_16,
+    participant_work_17,
+    participant_work_18,
   ],
   feedback: [
     {
+      authorName: "Maria Samir",
+      authorImg: "",
+      authorJobTitle: "Mariasamir63@gmail.com",
+      rating: 5,
+      feedback:"The course was so helpful and the instructor Ahmed fahmi was so friendly and professional, I knew alot about the corona renderer and materials and lighting techniques.. also he learnt me how to look into nature to see the real lightning and photography and materials not to make good visuals but also realistic ones.I made through the course light study of piera house with much of help and support in every stage."
+    },
+    {
+      
       authorName: "Mohamed Shahin",
       authorImg: "",
       authorJobTitle: "Mohamed.shahine15@gmail.com",
@@ -133,6 +165,41 @@ export const course1Data: CourseType = {
       authorJobTitle: "Mahmoud_wael@outlook.com",
       rating: 5,
       feedback:"The course was very informative in terms of  how to create high quality renders. Learnt how to create realistic materials, adjust shots lighting and how it could affect the over shot mood, and finally the importance of the camera positioning on the shot quality "
+    },
+    {
+      authorName: "Ahmed Moomen",
+      authorImg: "",
+      authorJobTitle: "Eng_ahmed_moomen@hotmail.com",
+      rating: 5,
+      feedback: "I am grateful for the skills and knowledge I have gained during my time at this design course"
+    },
+    {
+      authorName: "Mohamed Emad",
+      authorImg: "",
+      authorJobTitle: "memadebied@gmail.com",
+      rating: 5,
+      feedback: "The course was very very useful and well organized .. Instructor was so clever and helpful .  I really recommend it for people who are interested in the field of Architectural visualization "
+    },
+    {
+      authorName: "Zeyad Salah",
+      authorImg: "",
+      authorJobTitle: "Zeyad.salah@yahoo.com",
+      rating: 5,
+      feedback:"They were very professional and made sure the information was clear as can be."
+    },
+    {
+      authorName: "Kareem Adel",
+      authorImg: "",
+      authorJobTitle: "k.a.khalil92@gmail.com",
+      rating: 5,
+      feedback:"An excellent course with excellent instructors. Learned a lot in a very short period."
+    },
+    {
+      authorName: "Mahmoud Abou El-Fadle",
+      authorImg: "",
+      authorJobTitle: "Mohamed.aboulfadle@gmail.com",
+      rating: 5,
+      feedback:"The course was explained in an easy and clear way. Also, it changed the way i look at details around us in real life to apply it through renders and visualization."
     }
   ],
   price: "", // Add pricing information if available

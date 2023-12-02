@@ -11,15 +11,15 @@ export type ParticipantWorkSectionProps = {
 const ParticipantWorkSection = ({ sources }: ParticipantWorkSectionProps) => {
   return (
     <>
-      <Ribbon type="AfterCourse" title="Participant Work" />
+      <Ribbon type="AfterCourse" title="Participants' Work" />
       <ParticipantWorkWrapper>
         <LeftSideImgs>
-            {sources.slice(0,2).map((source, index) => (
+            {sources.slice(0,4).map((source, index) => (
               <img key={index} src={source} alt="" />
             ))}
         </LeftSideImgs>
         <RightSideImgs>
-            {sources.slice(2).map((source, index) => (
+            {sources.slice(4).map((source, index) => (
               <img key={index} src={source} alt="" />
             ))}
         </RightSideImgs>

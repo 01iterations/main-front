@@ -8,6 +8,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import CourseDetails from "./routes/course-details/courseDetails.route";
 import CoursesView from "./routes/courses-view/coursesView.route";
 import { About } from "./routes/about/about.route";
+import ProjectDetails from "./routes/Project-Details/ProjectDetails.route";
 
 const router = createHashRouter([
   {
@@ -17,6 +18,10 @@ const router = createHashRouter([
   {
     path: "/projects",
     element: <Projects />,
+  },
+  {
+    path: "/projects/:projectNum",
+    element: <ProjectDetails />,
   },
   {
     path: "/courses/:courseNum",
