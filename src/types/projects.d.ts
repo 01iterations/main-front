@@ -1,7 +1,16 @@
 export type projectSlides = {
+  src: string;
+  id?: string;
+  num?:number
+  quote?: {
+    title: string;
+  };
+};
+
+export type ProjectDataType = {
+  title: string;
+  sections: {
     src: string;
-    id?: string;
-    quote: {
-        title: string;
-    };
+    caption: string;
+  }[];
 };
