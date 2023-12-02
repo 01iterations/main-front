@@ -9,20 +9,22 @@ const Project3Data: ProjectDataType = {
     },
     {
         src: "/assets/projects/project_3/2.png",
-        caption: "A comprehensive examination of the Furniture, Fixtures, and Equipment (FF&E) employed within the space has been conducted, aiming to thoroughly understand the selection, placement, and functionality of these elements within the design."
+        caption:"In the living room, we’ve meticulously designed enclosures and curated a selection of furniture, fixtures, and equipment (FF&E) to optimize the utilization of the limited space. Every area within the room has been thoughtfully considered to ensure efficient and effective use."
     },
     {
         src: "/assets/projects/project_3/3.jpg",
-        caption: "The bathroom design prioritizes a balance between privacy and a connection to nature. It provides a secluded atmosphere while also offering glimpses of greenery and natural elements, creating a tranquil space that serves as a unique point of interest within the overall design."
+        caption: "A comprehensive examination of the Furniture, Fixtures, and Equipment (FF&E) employed within the space has been conducted, aiming to thoroughly understand the selection, placement, and functionality of these elements within the design."
+
     },
     {
         src: "/assets/projects/project_3/4.png",
-        caption: "the bedroom, a minimalistic design approach is employed, highlighted by the inclusion of dynamic headboards for the bed. These headboards introduce elegant curves to the overall design, infusing a sense of movement and sophistication into the space while maintaining the core principles of simplicity and functionality."
+        caption: "The bathroom design prioritizes a balance between privacy and a connection to nature. It provides a secluded atmosphere while also offering glimpses of greenery and natural elements, creating a tranquil space that serves as a unique point of interest within the overall design."
+
     },
     {
       src: "/assets/projects/project_3/5.jpg",
-      caption: ""
-  },
+      caption: "the bedroom, a minimalistic design approach is employed, highlighted by the inclusion of dynamic headboards for the bed. These headboards introduce elegant curves to the overall design, infusing a sense of movement and sophistication into the space while maintaining the core principles of simplicity and functionality."
+    },
   ],
 };
 
