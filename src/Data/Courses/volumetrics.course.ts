@@ -79,7 +79,7 @@ export const course2Data: CourseType = {
     "Basic knowledge of architectural visualization concepts and 3D rendering.",
     "Familiarity with Corona Renderer interface is recommended but not mandatory.",
   ],
-  link: "https://docs.google.com/forms/d/e/1FAIpQLSc-lvlKAyFou2Y36LOWMYkQ-veHtIW44mY8QdRGq3uAUwhSHw/viewform?usp=sharing",
+  link: "https://docs.google.com/forms/d/e/1FAIpQLScLvw9_4GhEikZmpU69z1jKqz_Lwntvai16E_Gw8XvN_Om46Q/viewform?usp=sharing",
   deliverable:
     "By the end of this workshop, participants will have a comprehensive understanding of volumetrics and atmospheric effects, enabling them to create visually stunning and atmospheric architectural visualizations using Corona Renderer. They will gain practical skills in utilizing volumetric materials and global volumetric effects to elevate the realism and immersive experience of their rendered scenes.",
   price: "", // Add pricing information if available
