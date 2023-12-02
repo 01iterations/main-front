@@ -22,7 +22,7 @@ export const devices = {
 export const ProjectContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 1px;
   background-color: black;
 `;
 
@@ -43,6 +43,19 @@ export const StyledCarousel = styled(Carousel)`
     height: 100vh;
     object-fit: cover;
   }
+
+  @media (max-width: 768px) {
+    height: 40vh;
+
+    .carousel-inner {
+      height: 40vh;
+    }
+
+    & img {
+      height: 40vh;
+      object-fit: cover;
+    }
+  }
   /* background-position: center; */
 `;
 
@@ -59,6 +72,6 @@ export const ProjectsGrid = styled.div`
   /* background-color: black; */
 
   > *:nth-child(3) {
-    grid-column: span 2!important;
+    grid-column: span 2 !important;
   }
 `;
