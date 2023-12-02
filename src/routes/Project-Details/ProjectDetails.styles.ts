@@ -10,6 +10,11 @@ export const ProjectDetailsWrapper = styled.div`
   background-color: #1b1c1d;
   color: rgba(255, 255, 255, 0.8);
 
+  @media (max-width: 768px) {
+    padding-top: 10vh;
+
+  }
+
 `;
 
 export const CenterContentWrapper = styled.div`
