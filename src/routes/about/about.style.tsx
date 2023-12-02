@@ -69,8 +69,8 @@ export const AboutText = styled.div`
   justify-content: flex-start; /* Start content from the top */
   align-items: center;
   width: 60%;
-  max-height: 100vh; /* Set a maximum height relative to the viewport */
-  /* overflow-y: auto; Enable vertical scrolling when content overflows */
+  max-height: 100vh; // Set a maximum height relative to the viewport
+  overflow-y: auto;
   gap: 20px;
   padding: 50px 0; /* Adjust padding as needed */
   box-sizing: border-box; /* Include padding in the total width/height */
@@ -79,10 +79,10 @@ export const AboutText = styled.div`
     width: 100%;
     border: 5px solid black;
   }
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     width: 100%;
     border: 5px solid black;
-  }
+  } */
 `;
 
 

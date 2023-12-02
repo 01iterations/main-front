@@ -11,7 +11,6 @@ export function About() {
     <AboutContainer>
       <Nav />
       <SideImg src="/assets/home/Highlight-04.png" alt="" />
-      {/* <CenterImg src="/assets/about/about.jpg" /> */}
       <AboutText>
         <AboutParagraph>
           <h1>01</h1>
