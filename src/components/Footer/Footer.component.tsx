@@ -11,7 +11,7 @@ import {
 import partnershipLogo from "../../../public/assets/footer/partnership.png";
 import itersLogo from "../../../public/assets/home/home-nav-logo.png";
 import { SocialIcon } from "react-social-icons";
-import { Phone, FolderMinus, Mail } from "react-feather";
+import { Phone  } from "react-feather";
 import { useNavigate } from "react-router-dom";
 function Footer() {
   const navigate = useNavigate();

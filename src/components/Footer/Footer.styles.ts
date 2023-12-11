@@ -6,7 +6,7 @@ export const FooterContainer = styled.footer`
   padding: 2.5rem 4rem 1rem 5rem;
   flex: 1;
   align-items: start;
-  background-color: #3d3d3d;
+  background-color: rgba(0, 0, 0, 0.9);
   color: white;
   position: relative;
   /* * {
