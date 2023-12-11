@@ -20,6 +20,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import useLoading from "../../hooks/useLoading.hook";
 import LoadingData from "../../components/LoadingData/LoadingData.component";
+import Footer from "../../components/Footer/Footer.component";
 
 // const ImgTest = styled.img`
 //     width: 100vw;
@@ -28,30 +29,32 @@ import LoadingData from "../../components/LoadingData/LoadingData.component";
 // `;
 
 function Home() {
-    const navigate = useNavigate();
-    const loading = useLoading(4000);
-    if(loading){
-        return <LoadingData isLoading={loading} />
-    }
+  const navigate = useNavigate();
+  const loading = useLoading(4000);
+  if (loading) {
+    return <LoadingData isLoading={loading} />;
+  }
   return (
-    <HomeContainer>
-      <AnimationSection>
-        <ImageSlider
-          images={[HighLight1, HighLight2, HighLight3, HighLight4]}
-        />
-      </AnimationSection>
-      <HomeNav>
-        <Logo src={HomeNavLogo} />
-        <NavItems>
-          <h3 onClick={() => navigate("/")}>Home</h3>
-          <h3 onClick={() => navigate("/projects")}>Projects</h3>
-          <h3 onClick={() => navigate("/courses")}>Courses</h3>
-          <h3 onClick={() => navigate("/about")}>About</h3>
-          {/* <h3 onClick={() => navigate("/")}>Contact</h3> */}
-
-        </NavItems>
-      </HomeNav>
-    </HomeContainer>
+    <>
+      <HomeContainer>
+        <AnimationSection>
+          <ImageSlider
+            images={[HighLight1, HighLight2, HighLight3, HighLight4]}
+          />
+        </AnimationSection>
+        <HomeNav>
+          <Logo src={HomeNavLogo} />
+          <NavItems>
+            <h3 onClick={() => navigate("/")}>Home</h3>
+            <h3 onClick={() => navigate("/projects")}>Projects</h3>
+            <h3 onClick={() => navigate("/courses")}>Courses</h3>
+            <h3 onClick={() => navigate("/about")}>About</h3>
+            {/* <h3 onClick={() => navigate("/")}>Contact</h3> */}
+          </NavItems>
+        </HomeNav>
+      </HomeContainer>
+      <Footer />
+    </>
   );
 }
 

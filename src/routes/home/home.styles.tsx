@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+export const HomeWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+`;
+
 export const HomeContainer = styled.div`
   overflow: hidden;
   display: flex;
