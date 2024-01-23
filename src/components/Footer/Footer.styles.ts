@@ -12,6 +12,16 @@ export const FooterContainer = styled.footer`
   /* * {
     border: 1px solid blue;
   } */
+  @media (max-width: 768px) {
+    padding: 2rem 2rem 1rem 0rem;
+    /* flex-direction: column;
+    align-items: center; */
+  }
+  @media (max-width: 425px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
 `;
 
 export const LeftSection = styled.section`
@@ -19,23 +29,29 @@ export const LeftSection = styled.section`
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  /* justify-content: space-between; */
+  /* align-items: flex-start; */
 
   @media (max-width: 1280px) {
-    display: none;
+    /* display: none; */
     align-items: center;
-    width: 70%;
+    width: 30%;
   }
 
   @media (max-width: 768px) {
     align-items: center;
     width: 100%;
   }
+
+  @media (max-width: 425px) {
+    display: none;
+  }
 `;
 
 export const LogoContainer = styled.img`
-  width: 70%;
+  width: 40%;
 
   margin-bottom: 2rem;
   @media (max-width: 1280px) {
@@ -51,7 +67,11 @@ export const MiddleSection = styled.section`
   justify-content: center;
   gap: 4rem;
   @media (max-width: 1280px) {
-    display: none;
+    div:not(:last-child) {
+      display: none;
+    }
+
+    /* display: none; */
   }
   @media (max-width: 786px) {
     width: 100%;
@@ -70,12 +90,18 @@ export const FooterLinksListContainer = styled.div`
       color: white;
     }
   }
-  p {
-    svg {
-      width: 1.5rem;
-    }
+  a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+
+    cursor: url(${whitecursor}), auto;
     &:hover {
-      color: red;
+      color: #8ea3a8;
+    }
+  }
+  p {
+    &:hover {
+      color: #8ea3a8;
     }
   }
   color: rgba(255, 255, 255, 0.8);

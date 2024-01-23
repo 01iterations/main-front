@@ -11,7 +11,7 @@ import {
 import partnershipLogo from "../../../public/assets/footer/partnership.png";
 import itersLogo from "../../../public/assets/home/home-nav-logo.png";
 import { SocialIcon } from "react-social-icons";
-import { Phone  } from "react-feather";
+import { Phone, Mail } from "react-feather";
 import { useNavigate } from "react-router-dom";
 function Footer() {
   const navigate = useNavigate();
@@ -19,6 +19,10 @@ function Footer() {
     <FooterContainer>
       <LeftSection>
         <LogoContainer src={itersLogo} alt="01iterations Logo" />
+        <div>
+          <p>© 2021 01iterations </p>
+          <p>All rights reserved</p>
+        </div>
       </LeftSection>
       <MiddleSection>
         <FooterLinksListContainer>
@@ -51,12 +55,22 @@ function Footer() {
           </p>
         </FooterLinksListContainer>
         <FooterLinksListContainer>
+          <p>Contact</p>
+
           <p>
-            <Phone /> Contact
+            <a href="tel:+201117610555">
+              <Phone /> +201117610555
+            </a>
           </p>
-          <p>Form</p>
-          <p>Email</p>
-          <p>Phone</p>
+
+          <p>
+            <a
+              href="mailto:hello@01iterations.com?Subject=Hey%There"
+              target="_blank"
+            >
+              <Mail /> hello@01iterations.com
+            </a>
+          </p>
         </FooterLinksListContainer>
       </MiddleSection>
       <RightSection>
