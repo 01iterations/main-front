@@ -1,15 +1,13 @@
 import {
   FooterContainer,
   FooterLinksListContainer,
-  LeftSection,
-  LogoContainer,
   MiddleSection,
   PartnershipContainer,
   RightSection,
   SocialMediaContainer,
 } from "./Footer.styles";
 import partnershipLogo from "../../../public/assets/footer/partnership.png";
-import itersLogo from "../../../public/assets/home/home-nav-logo.png";
+// import itersLogo from "../../../public/assets/home/home-nav-logo.png";
 import { SocialIcon } from "react-social-icons";
 import { Phone, Mail } from "react-feather";
 import { useNavigate } from "react-router-dom";
@@ -17,13 +15,13 @@ function Footer() {
   const navigate = useNavigate();
   return (
     <FooterContainer>
-      <LeftSection>
+      {/* <LeftSection>
         <LogoContainer src={itersLogo} alt="01iterations Logo" />
         <div>
-          <p>© 2021 01iterations </p>
+          <p>© 2024 01iterations </p>
           <p>All rights reserved</p>
         </div>
-      </LeftSection>
+      </LeftSection> */}
       <MiddleSection>
         <FooterLinksListContainer>
           <p>About</p>

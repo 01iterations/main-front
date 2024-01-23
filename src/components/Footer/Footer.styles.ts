@@ -139,7 +139,7 @@ export const SocialMediaContainer = styled.div`
 `;
 
 export const PartnershipContainer = styled.img`
-  width: 80%;
+  width: 35%;
   @media (max-width: 768px) {
     width: 100%;
   }
