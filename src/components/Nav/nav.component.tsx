@@ -9,7 +9,7 @@ import {
     // OrganizationLogo,
 } from "../../components/Nav/nav.styles";
 
-// import logoImg from "/assets/icons/01itersWhite.png";
+// import logoImg from "/assets/icons/01itersWhite.webp";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
@@ -31,8 +31,8 @@ function Nav() {
                 <Link to="/projects">Projects</Link>
                 <Link to="/about">About</Link>
                 <Link to="/courses">Courses</Link>
-                {featureBlock &&<Link to="/">Services</Link>}
-                {featureBlock &&<Link to="/contact">Contact</Link>}
+                {featureBlock && <Link to="/">Services</Link>}
+                {featureBlock && <Link to="/contact">Contact</Link>}
             </LinkGroup>
             <Hamburger onClick={toggleMenu}>
                 <span />
@@ -44,8 +44,8 @@ function Nav() {
                 <MenuItem to="/projects">Projects</MenuItem>
                 <MenuItem to="/about">About</MenuItem>
                 <MenuItem to="/courses">Courses</MenuItem>
-                {featureBlock &&<MenuItem to="/">Services</MenuItem>}
-                {featureBlock &&<MenuItem to="/">Contact</MenuItem>}
+                {featureBlock && <MenuItem to="/">Services</MenuItem>}
+                {featureBlock && <MenuItem to="/">Contact</MenuItem>}
             </Menu>
         </Navbar>
     );

@@ -6,8 +6,8 @@ import {
   RightSection,
   SocialMediaContainer,
 } from "./Footer.styles";
-import partnershipLogo from "../../../public/assets/footer/partnership.png";
-// import itersLogo from "../../../public/assets/home/home-nav-logo.png";
+import partnershipLogo from "../../../public/assets/footer/partnership.webp";
+// import itersLogo from "../../../public/assets/home/home-nav-logo.webp";
 import { SocialIcon } from "react-social-icons";
 import { Phone, Mail } from "react-feather";
 import { useNavigate } from "react-router-dom";

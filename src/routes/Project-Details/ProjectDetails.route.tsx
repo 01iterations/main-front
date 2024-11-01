@@ -40,9 +40,9 @@ const ProjectDetails = () => {
       </CenterContentWrapper>
       <SideContentWrapper>
         <RecommendationTitle>More Projects</RecommendationTitle>
-        <img src="/assets/slides/01.png" alt="" />
-        <img src="/assets/slides/07.png" alt="" />
-        <img src="/assets/slides/slide1.jpg" alt="" />
+        <img src="/assets/slides/01.webp" alt="" />
+        <img src="/assets/slides/07.webp" alt="" />
+        <img src="/assets/slides/slide1.webp" alt="" />
       </SideContentWrapper>
     </ProjectDetailsWrapper>
   );

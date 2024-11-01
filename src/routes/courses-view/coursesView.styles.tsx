@@ -25,8 +25,7 @@ export const CourseCenterWrapper = styled.div`
 `;
 
 export const CourseCard = styled.img`
-  /* background-image: url('/assets/courses/course_1/card1.png'); */
-  background-color: red;
+  /* background-image: url('/assets/courses/course_1/card1.webp'); */
   width: 30%;
   /* object-fit: contain; */
 

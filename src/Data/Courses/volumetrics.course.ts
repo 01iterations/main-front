@@ -1,10 +1,10 @@
 import { CourseType } from "../../types/courseDetails";
-import cover_img from "/assets/courses/course_2/cover.png";
-import module1_img from "/assets/courses/course_2/2.jpg";
-import module2_img from "/assets/courses/course_2/1.png";
-import module3_img from "/assets/courses/course_2/3.jpg";
-import module4_img from "/assets/courses/course_2/4.jpg";
-import module5_img from "/assets/courses/course_2/5.jpg";
+import cover_img from "/assets/courses/course_2/cover.webp";
+import module1_img from "/assets/courses/course_2/2.webp";
+import module2_img from "/assets/courses/course_2/1.webp";
+import module3_img from "/assets/courses/course_2/3.webp";
+import module4_img from "/assets/courses/course_2/4.webp";
+import module5_img from "/assets/courses/course_2/5.webp";
 
 export const course2Data: CourseType = {
   name: "Mastering Architectural Visualization with Volumetrics and Atmosphere using Corona Renderer",

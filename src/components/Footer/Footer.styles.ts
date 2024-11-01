@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import whitecursor from "../../../public/assets/icons/01itersWhite-1.png";
+import whitecursor from "../../../public/assets/icons/01itersWhite-1.webp";
 
 export const FooterContainer = styled.footer`
   display: flex;

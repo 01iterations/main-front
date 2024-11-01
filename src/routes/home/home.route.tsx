@@ -1,13 +1,13 @@
 // import LogoVideo from '../../assets/home/sample.mp4'
-// import HighLight1 from "/assets/home/Highlight-02.png";
-// import HighLight2 from "/assets/home/Highlight-03.png";
-// import HighLight3 from "/assets/home/Highlight-04.png";
-// import HighLight4 from "/assets/home/Highlight-05.png";
-import HighLight1 from "/assets/home/01.jpg";
-import HighLight2 from "/assets/home/02.jpg";
-import HighLight3 from "/assets/home/03.jpg";
-import HighLight4 from "/assets/home/04.jpg";
-import HomeNavLogo from "/assets/home/home-nav-logo.png";
+// import HighLight1 from "/assets/home/Highlight-02.webp";
+// import HighLight2 from "/assets/home/Highlight-03.webp";
+// import HighLight3 from "/assets/home/Highlight-04.webp";
+// import HighLight4 from "/assets/home/Highlight-05.webp";
+import HighLight1 from "/assets/home/01.webp";
+import HighLight2 from "/assets/home/02.webp";
+import HighLight3 from "/assets/home/03.webp";
+import HighLight4 from "/assets/home/04.webp";
+import HomeNavLogo from "/assets/home/home-nav-logo.webp";
 
 import ImageSlider from "../../components/imageSlider/imageSlider.component";
 import {

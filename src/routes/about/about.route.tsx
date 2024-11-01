@@ -10,7 +10,7 @@ export function About() {
   return (
     <AboutContainer>
       <Nav />
-      <SideImg src="/assets/home/Highlight-02.png" alt="" />
+      <SideImg src="/assets/home/Highlight-02.webp" alt="" />
       <AboutText>
         <AboutParagraph>
           <h1>01</h1>
@@ -57,7 +57,7 @@ export function About() {
           </p>
         </AboutParagraph>
       </AboutText>
-      <SideImg src="/assets/home/Highlight-02-flipped.png" alt="" />
+      <SideImg src="/assets/home/Highlight-02-flipped.webp" alt="" />
     </AboutContainer>
   );
 }

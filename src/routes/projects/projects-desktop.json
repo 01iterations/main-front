@@ -1,51 +1,51 @@
 [
-    {
-        "src": "assets/projects/thumbnails/1.png",
-        "num" : 3,
-        "quote": {
-            "title": "Rooftop Camden"
-        }
-    },
-    {
-        "src": "assets/projects/thumbnails/2.png",
-        "num" : 2,
-        "quote": {
-            "title": "Puna Park"
-        }
-    },
-    {
-        "src": "assets/projects/thumbnails/3.png",
-        "num" : 1,
-        "quote": {
-            "title": "The D House"
-        }
-    },
-    {
-        "src": "assets/projects/thumbnails/4.png",
-        "num" : 4,
-        "quote": {
-            "title": "Wood Court"
-        }
-    },
-    {
-        "src": "assets/projects/thumbnails/5.png",
-        "num" : 5,
-        "quote": {
-            "title": "Finchley's Apartment"
-        }
-    },
-    {
-        "src": "assets/projects/thumbnails/6.jpg",
-        "num" : 6,
-        "quote": {
-            "title": "Madrid's Apartment"
-        }
-    },
-    {
-        "src": "assets/projects/thumbnails/7.jpg",
-        "num" : 7,
-        "quote": {
-            "title": "The Gravity Well"
-        }
+  {
+    "src": "assets/projects/thumbnails/1.webp",
+    "num": 3,
+    "quote": {
+      "title": "Rooftop Camden"
     }
+  },
+  {
+    "src": "assets/projects/thumbnails/2.webp",
+    "num": 2,
+    "quote": {
+      "title": "Puna Park"
+    }
+  },
+  {
+    "src": "assets/projects/thumbnails/3.webp",
+    "num": 1,
+    "quote": {
+      "title": "The D House"
+    }
+  },
+  {
+    "src": "assets/projects/thumbnails/4.webp",
+    "num": 4,
+    "quote": {
+      "title": "Wood Court"
+    }
+  },
+  {
+    "src": "assets/projects/thumbnails/5.webp",
+    "num": 5,
+    "quote": {
+      "title": "Finchley's Apartment"
+    }
+  },
+  {
+    "src": "assets/projects/thumbnails/6.webp",
+    "num": 6,
+    "quote": {
+      "title": "Madrid's Apartment"
+    }
+  },
+  {
+    "src": "assets/projects/thumbnails/7.webp",
+    "num": 7,
+    "quote": {
+      "title": "The Gravity Well"
+    }
+  }
 ]

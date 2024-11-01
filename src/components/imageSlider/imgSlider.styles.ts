@@ -1,18 +1,15 @@
 import styled from "styled-components";
 
 export const ImageSliderContainer = styled.div`
+  background-color: black;
 
-background-color: black;
-
-width: 100%;
-height: 100%;
-/* border:1px solid red; */
-display: flex;
-justify-content: center;
-object-fit: cover;
-
-
-`
+  width: 100%;
+  height: 100%;
+  /* border:1px solid red; */
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
+`;
 
 // export const sizes = {
 //     xsmall: "320px",
@@ -32,10 +29,8 @@ object-fit: cover;
 //     xxlarge: `(min-width: ${sizes.xlarge}) and (max-width: ${sizes.xxlarge})`,
 // };
 
-
-
 // export const ImageSliderContainer = styled.div`
-//     cursor: url("../../../public/icons/01itersWhite.png"), auto;
+//     cursor: url("../../../public/icons/01itersWhite.webp"), auto;
 //     width: 100%;
 //     height: 100vh;
 //     display: flex;

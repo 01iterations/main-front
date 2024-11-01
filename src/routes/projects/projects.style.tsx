@@ -63,7 +63,7 @@ export const ProjectsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, 50%);
   /* min-height: 70vh; */
-  /* cursor: url("../../../public/assets/cursor\ icons/01itersWhite.png"),auto; */
+  /* cursor: url("../../../public/assets/cursor\ icons/01itersWhite.webp"),auto; */
   /* gap: 5px; */
   /* margin-left: 10px; */
   padding: 0;
