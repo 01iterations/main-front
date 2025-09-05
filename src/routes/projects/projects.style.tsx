@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Carousel } from "react-bootstrap";
 
 export const sizes = {
   xsmall: "320px",
@@ -22,56 +21,66 @@ export const devices = {
 export const ProjectContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1px;
-  background-color: black;
+  min-height: 100vh;
+  background-color: #1b1c1d;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0 5%;
 `;
 
-export const StyledCarousel = styled(Carousel)`
-  height: 100vh;
-  /* object-position: center; */
-  /* object-fit: cover; */
-  /* margin-top: 8vh; */
-  .carousel-inner {
-    height: 100vh;
-    object-position: center;
-    object-fit: cover;
-    display: flex;
-    align-items: center;
-  }
+export const ProjectsHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8vh 0 4vh 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 4vh;
+`;
 
-  & img {
-    height: 100vh;
-    object-fit: cover;
-  }
-
+export const ProjectsTitle = styled.h1`
+  font-family: caslon;
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  margin: 0;
+  
   @media (max-width: 768px) {
-    height: 40vh;
-
-    .carousel-inner {
-      height: 40vh;
-    }
-
-    & img {
-      height: 40vh;
-      object-fit: cover;
-    }
+    font-size: 2rem;
   }
-  /* background-position: center; */
+`;
+
+export const FilterButton = styled.button`
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 12px 24px;
+  font-family: avenir;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+    color: white;
+  }
 `;
 
 export const ProjectsGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, 50%);
-  /* min-height: 70vh; */
-  /* cursor: url("../../../public/assets/cursor\ icons/01itersWhite.webp"),auto; */
-  /* gap: 5px; */
-  /* margin-left: 10px; */
-  padding: 0;
-  overflow: auto !important;
-  height: 100%;
-  /* background-color: black; */
-
-  > *:nth-child(3) {
-    grid-column: span 2 !important;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4vh;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
+`;
+
+export const ProjectsSubtitle = styled.p`
+  font-family: provan-book-italic;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  margin: 2vh 0;
+  padding-bottom: 4vh;
 `;

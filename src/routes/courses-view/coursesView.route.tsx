@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import Nav from "../../components/Nav/nav.component";
 import {
   CourseCard,
   CourseCenterWrapper,
@@ -17,7 +16,6 @@ function CoursesView() {
   }
   return (
     <CoursesViewWrapper>
-      <Nav />
       <CourseCenterWrapper>
         <CourseCard
           src={course1_thumbnail}

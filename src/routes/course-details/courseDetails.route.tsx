@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Nav from "../../components/Nav/nav.component";
 import { CourseType } from "../../types/courseDetails";
 import {
   ApplyBtn,
@@ -26,7 +25,6 @@ function CourseDetails() {
 
   return (
     <CourseDetailsWrapper>
-      <Nav />
       <CenterWrapper>
         {courseData && (
           <>

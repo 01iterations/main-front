@@ -1,4 +1,3 @@
-import Nav from "../../components/Nav/nav.component";
 import {
   AboutContainer,
   AboutParagraph,
@@ -9,7 +8,6 @@ import {
 export function About() {
   return (
     <AboutContainer>
-      <Nav />
       <SideImg src="/assets/home/Highlight-02.webp" alt="" />
       <AboutText>
         <AboutParagraph>

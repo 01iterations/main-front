@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createHashRouter, RouterProvider } from "react-router-dom";
+import Layout from "./components/Layout/Layout.component";
 import Home from "./routes/home/home.route";
 import Projects from "./routes/projects/projects.route";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
@@ -13,27 +14,27 @@ import ProjectDetails from "./routes/Project-Details/ProjectDetails.route";
 const router = createHashRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <Layout><Home /></Layout>,
   },
   {
     path: "/projects",
-    element: <Projects />,
+    element: <Layout><Projects /></Layout>,
   },
   {
     path: "/projects/:projectNum",
-    element: <ProjectDetails />,
+    element: <Layout><ProjectDetails /></Layout>,
   },
   {
     path: "/courses/:courseNum",
-    element: <CourseDetails />,
+    element: <Layout><CourseDetails /></Layout>,
   },
   {
     path: "/courses",
-    element: <CoursesView />,
+    element: <Layout><CoursesView /></Layout>,
   },
   {
     path: "/about",
-    element: <About />,
+    element: <Layout><About /></Layout>,
   },
 ]);
 

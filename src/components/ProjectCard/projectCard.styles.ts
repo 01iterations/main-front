@@ -1,94 +1,71 @@
 import styled, { keyframes } from "styled-components";
 
 export const sizes = {
-    xsmall: "320px",
-    small: "480px",
-    medium: "768px",
-    large: "1024px",
-    xlarge: "1200px",
-    xxlarge: "1440px",
+  xsmall: "320px",
+  small: "480px",
+  medium: "768px",
+  large: "1024px",
+  xlarge: "1200px",
+  xxlarge: "1440px",
 };
 
 export const devices = {
-    xsmall: `(max-width: ${sizes.xsmall})`,
-    small: `(min-width: ${sizes.xsmall}) and (max-width: ${sizes.small})`,
-    medium: `(min-width: ${sizes.small}) and (max-width: ${sizes.medium})`,
-    large: `(min-width: ${sizes.medium}) and (max-width: ${sizes.large})`,
-    xlarge: `(min-width: ${sizes.large}) and (max-width: ${sizes.xlarge})`,
-    xxlarge: `(min-width: ${sizes.xlarge}) and (max-width: ${sizes.xxlarge})`,
+  xsmall: `(max-width: ${sizes.xsmall})`,
+  small: `(min-width: ${sizes.xsmall}) and (max-width: ${sizes.small})`,
+  medium: `(min-width: ${sizes.small}) and (max-width: ${sizes.medium})`,
+  large: `(min-width: ${sizes.medium}) and (max-width: ${sizes.large})`,
+  xlarge: `(min-width: ${sizes.large}) and (max-width: ${sizes.xlarge})`,
+  xxlarge: `(min-width: ${sizes.xlarge}) and (max-width: ${sizes.xxlarge})`,
 };
 
-const fadeIn = keyframes`
-    from {
-      background-position: 0% 100%;
-    }
-    to {
-      background-position: 0% 0%;
-    }
-`;
-
 export const ProjectCardContainer = styled.div`
-    /* border-radius: 15px; */
-    overflow: hidden;
-    max-height: 60vh;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    z-index: 0;
-    & img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 
-    @media ${devices.medium} {
-        max-height: 30vh;
-    }
+  &:hover {
+    transform: translateY(-5px);
+  }
 `;
 
-export const ProjectContent = styled.div`
-    position: absolute;
-    /* background-color: rgba(0,0,0,0.5); */
-    border-radius: 0;
-    border: 1px solid black;
-    bottom: 0;
-    color: white;
-    z-index: 1;
-    margin-left: 0;
-    width: 100%;
-    height: 100%;
-    padding-left: 10px;
-    /* border: 1px solid red; */
-    /* padding-top: 200px; */
-    /* margin-bottom: -10px; */
-    /* padding-bottom: -10px; */
+export const ProjectImage = styled.img`
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 1rem;
 
-    ${ProjectCardContainer}:hover & {
-        display: block;
-        background: linear-gradient(
-            to top,
-            rgba(0, 0, 0, 1) 0%,
-            rgba(0, 0, 0, 0) 100%
-        );
-        animation: ${fadeIn} 0.7s forwards;
-        cursor: pointer;
-    }
+  @media ${devices.medium} {
+    height: 200px;
+  }
 `;
 
 export const ProjectCardContentDetails = styled.div`
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    font-size: 1.1vw;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 
-    & h6 {
-        font-family: avenir;
-        font-size: 1.1vw;
+  h3 {
+    font-family: caslon;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    line-height: 1.3;
 
-        @media ${devices.small} {
-            font-size: 12px;
-        }
+    @media ${devices.medium} {
+      font-size: 1rem;
     }
+  }
+
+  p {
+    font-family: avenir;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+
+    @media ${devices.medium} {
+      font-size: 0.8rem;
+    }
+  }
 `;

@@ -1,8 +1,8 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   ProjectCardContainer,
   ProjectCardContentDetails,
-  ProjectContent,
+  ProjectImage,
 } from "./projectCard.styles";
 
 type PropsType = {
@@ -17,16 +17,11 @@ export function ProjectCard({ thumbnail, courseTitle, projectNum }: PropsType) {
     <ProjectCardContainer
       onClick={() => navigate(`/projects/${projectNum}`)}
     >
-      {/* <Link to={`/projects/${courseTitle}`}> */}
-      <Link to={`/projects`}>
-        <ProjectContent>
-          <ProjectCardContentDetails>
-            <h6> {courseTitle}</h6>
-            {/* <p>{courseDescription}</p> */}
-          </ProjectCardContentDetails>
-        </ProjectContent>
-      </Link>
-      <img src={thumbnail} alt={`project thumbnail `} />
+      <ProjectImage src={thumbnail} alt={`project thumbnail`} />
+      <ProjectCardContentDetails>
+        <h3>{courseTitle}</h3>
+        <p>Architecture & Design</p>
+      </ProjectCardContentDetails>
     </ProjectCardContainer>
   );
 }
