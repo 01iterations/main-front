@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import { createHashRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./components/Layout/Layout.component";
 import Home from "./routes/home/home.route";
 import Projects from "./routes/projects/projects.route";
@@ -11,7 +11,7 @@ import CoursesView from "./routes/courses-view/coursesView.route";
 import { About } from "./routes/about/about.route";
 import ProjectDetails from "./routes/Project-Details/ProjectDetails.route";
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout><Home /></Layout>,

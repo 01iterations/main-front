@@ -22,7 +22,6 @@ function Nav() {
     };
 
     const isActive = (path: string) => {
-        // For hash routing with createHashRouter, use pathname
         const currentPath = location.pathname;
         // Handle both exact matches and when path is root
         if (path === '/') {
