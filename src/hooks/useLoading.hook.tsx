@@ -14,28 +14,47 @@ export const useLoading = (delay = 0) => {
   return loading;
 };
 
-// New hook for home page that only loads on refresh
-export const useHomeLoading = (delay = 4000) => {
-  const [loading, setLoading] = useState(false);
+// New hook for home page that waits for all images to load
+export const useHomeLoading = (imageUrls: string[], minDelay = 2000) => {
+  const [loading, setLoading] = useState(true);
+  const [hasLoadedOnce, setHasLoadedOnce] = useState(false);
 
   useEffect(() => {
-    // Check if this is a page refresh (not navigation)
-    // We can detect this by checking the navigation type
-    const navigationEntries = window.performance.getEntriesByType('navigation') as PerformanceNavigationTiming[];
-    const navigationEntry = navigationEntries[0];
-
-    // Only show loading if it's a page reload/refresh
-    const isPageRefresh = navigationEntry && navigationEntry.type === 'reload';
-
-    if (isPageRefresh) {
-      setLoading(true);
-      const timer = setTimeout(() => {
-        setLoading(false);
-      }, delay);
-
-      return () => clearTimeout(timer);
+    // Only show loading screen on first load or page refresh
+    if (hasLoadedOnce) {
+      setLoading(false);
+      return;
     }
-  }, [delay]);
+
+    setLoading(true);
+
+    // Track when each image loads
+    const imagePromises = imageUrls.map((url) => {
+      return new Promise<string>((resolve, reject) => {
+        const img = new Image();
+        img.onload = () => resolve(url);
+        img.onerror = () => reject(url);
+        img.src = url;
+      });
+    });
+
+    // Wait for all images to load or timeout after 10 seconds
+    const timeoutPromise = new Promise<string[]>((resolve) => {
+      setTimeout(() => resolve([]), 10000);
+    });
+
+    Promise.race([
+      Promise.all(imagePromises),
+      timeoutPromise
+    ]).then(() => {
+      // Ensure minimum loading time for smooth UX
+      setTimeout(() => {
+        setLoading(false);
+        setHasLoadedOnce(true);
+      }, minDelay);
+    });
+
+  }, [imageUrls, minDelay, hasLoadedOnce]);
 
   return loading;
 };

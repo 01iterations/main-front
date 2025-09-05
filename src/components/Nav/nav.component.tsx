@@ -2,7 +2,6 @@ import {
     Hamburger,
     LinkGroup,
     Menu,
-    MenuItem,
     MenuNavLink,
     Navbar,
     // OraganizationLogoImg,
@@ -16,7 +15,6 @@ import { useState } from "react";
 
 function Nav() {
     const [showMenu, setShowMenu] = useState(false);
-    const [featureBlock] = useState(false);
     const location = useLocation();
 
     const toggleMenu = () => {
@@ -43,8 +41,6 @@ function Nav() {
                 <NavLink to="/projects" className={isActive('/projects') ? 'active' : ''}>Projects</NavLink>
                 <NavLink to="/about" className={isActive('/about') ? 'active' : ''}>About</NavLink>
                 <NavLink to="/courses" className={isActive('/courses') ? 'active' : ''}>Courses</NavLink>
-                {featureBlock && <NavLink to="/" className={isActive('/') ? 'active' : ''}>Services</NavLink>}
-                {featureBlock && <NavLink to="/contact" className={isActive('/contact') ? 'active' : ''}>Contact</NavLink>}
             </LinkGroup>
             <Hamburger onClick={toggleMenu}>
                 <span />
@@ -56,8 +52,6 @@ function Nav() {
                 <MenuNavLink to="/projects" className={isActive('/projects') ? 'active' : ''}>Projects</MenuNavLink>
                 <MenuNavLink to="/about" className={isActive('/about') ? 'active' : ''}>About</MenuNavLink>
                 <MenuNavLink to="/courses" className={isActive('/courses') ? 'active' : ''}>Courses</MenuNavLink>
-                {featureBlock && <MenuNavLink to="/" className={isActive('/') ? 'active' : ''}>Services</MenuNavLink>}
-                {featureBlock && <MenuNavLink to="/">Contact</MenuNavLink>}
             </Menu>
         </Navbar>
     );

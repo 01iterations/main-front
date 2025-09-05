@@ -1,6 +1,6 @@
 [
   {
-    "src": "assets/projects/thumbnails/1.webp",
+    "src": "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757088599/01iterations/assets_projects_thumbnails_1.jpg",
     "num": 3,
     "quote": {
       "title": "Rooftop Camden"
@@ -8,7 +8,7 @@
     "location": "Camden, London"
   },
   {
-    "src": "assets/projects/thumbnails/2.webp",
+    "src": "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757088605/01iterations/assets_projects_thumbnails_2.jpg",
     "num": 2,
     "quote": {
       "title": "Puna Park"
@@ -16,7 +16,7 @@
     "location": "Chicago, USA"
   },
   {
-    "src": "assets/projects/thumbnails/3.webp",
+    "src": "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757088610/01iterations/assets_projects_thumbnails_3.jpg",
     "num": 1,
     "quote": {
       "title": "The D House"
@@ -24,7 +24,7 @@
     "location": "Rize, Turkey"
   },
   {
-    "src": "assets/projects/thumbnails/4.webp",
+    "src": "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757088616/01iterations/assets_projects_thumbnails_4.jpg",
     "num": 4,
     "quote": {
       "title": "Wood Court"
@@ -32,7 +32,7 @@
     "location": "New York, USA"
   },
   {
-    "src": "assets/projects/thumbnails/5.webp",
+    "src": "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757088620/01iterations/assets_projects_thumbnails_5.jpg",
     "num": 5,
     "quote": {
       "title": "Finchley's Apartment"
@@ -40,7 +40,7 @@
     "location": "London, UK"
   },
   {
-    "src": "assets/projects/thumbnails/6.webp",
+    "src": "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757088623/01iterations/assets_projects_thumbnails_6.jpg",
     "num": 6,
     "quote": {
       "title": "Madrid's Apartment"
@@ -48,7 +48,7 @@
     "location": "Madrid, Spain"
   },
   {
-    "src": "assets/projects/thumbnails/7.webp",
+    "src": "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757088629/01iterations/assets_projects_thumbnails_7.jpg",
     "num": 7,
     "quote": {
       "title": "The Gravity Well"

@@ -1,32 +1,58 @@
 import { CourseType } from "../../types/courseDetails";
-import cover_img from "/assets/courses/course_1/cover.webp";
-import module1_img from "/assets/courses/course_1/module_1.webp";
-import module2_img from "/assets/courses/course_1/module_2.webp";
-import module3_img from "/assets/courses/course_1/module_3.webp";
-import module4_img from "/assets/courses/course_1/module_4.webp";
-import card1_img from "/assets/courses/course_1/card1.webp";
-import card2_img from "/assets/courses/course_1/card2.webp";
 
-import participant_work_1 from "/assets/courses/course_1/participant-work/1.webp";
-import participant_work_2 from "/assets/courses/course_1/participant-work/2.webp";
-import participant_work_3 from "/assets/courses/course_1/participant-work/5.webp";
-import participant_work_4 from "/assets/courses/course_1/participant-work/4.webp";
-import participant_work_5 from "/assets/courses/course_1/participant-work/7.webp";
-import participant_work_6 from "/assets/courses/course_1/participant-work/6.webp";
-import participant_work_7 from "/assets/courses/course_1/participant-work/3.webp";
-import participant_work_8 from "/assets/courses/course_1/participant-work/8.webp";
-import participant_work_9 from "/assets/courses/course_1/participant-work/9.webp";
-import participant_work_10 from "/assets/courses/course_1/participant-work/10.webp";
-import participant_work_11 from "/assets/courses/course_1/participant-work/11.webp";
-import participant_work_12 from "/assets/courses/course_1/participant-work/12.webp";
-import participant_work_13 from "/assets/courses/course_1/participant-work/13.webp";
-import participant_work_14 from "/assets/courses/course_1/participant-work/14.webp";
-import participant_work_15 from "/assets/courses/course_1/participant-work/15.webp";
-import participant_work_16 from "/assets/courses/course_1/participant-work/16.webp";
-import participant_work_17 from "/assets/courses/course_1/participant-work/17.webp";
-import participant_work_18 from "/assets/courses/course_1/participant-work/18.webp";
+const cover_img =
+  "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083700/01iterations/assets_courses_course_1_cover.jpg";
+const module1_img =
+  "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083704/01iterations/assets_courses_course_1_module_1.jpg";
+const module2_img =
+  "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083710/01iterations/assets_courses_course_1_module_2.jpg";
+const module3_img =
+  "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083715/01iterations/assets_courses_course_1_module_3.jpg";
+const module4_img =
+  "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083721/01iterations/assets_courses_course_1_module_4.jpg";
+const card1_img =
+  "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083723/01iterations/assets_courses_course_1_card1.jpg";
+const card2_img =
+  "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083725/01iterations/assets_courses_course_1_card2.png";
 
-// import participant_work_7 from "/assets/courses/course_1/participant-work/7.webp";
+const participant_work_1 =
+  "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083728/01iterations/assets_courses_course_1_participant-work_1.jpg";
+const participant_work_2 =
+  "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083731/01iterations/assets_courses_course_1_participant-work_2.jpg";
+const participant_work_3 =
+  "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083733/01iterations/assets_courses_course_1_participant-work_5.jpg";
+const participant_work_4 =
+  "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083740/01iterations/assets_courses_course_1_participant-work_4.jpg";
+const participant_work_5 =
+  "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083743/01iterations/assets_courses_course_1_participant-work_7.png";
+const participant_work_6 =
+  "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083746/01iterations/assets_courses_course_1_participant-work_6.jpg";
+const participant_work_7 =
+  "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083749/01iterations/assets_courses_course_1_participant-work_3.jpg";
+const participant_work_8 =
+  "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083752/01iterations/assets_courses_course_1_participant-work_8.jpg";
+const participant_work_9 =
+  "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083755/01iterations/assets_courses_course_1_participant-work_9.jpg";
+const participant_work_10 =
+  "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083758/01iterations/assets_courses_course_1_participant-work_10.jpg";
+const participant_work_11 =
+  "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083764/01iterations/assets_courses_course_1_participant-work_11.jpg";
+const participant_work_12 =
+  "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083766/01iterations/assets_courses_course_1_participant-work_12.jpg";
+const participant_work_13 =
+  "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083768/01iterations/assets_courses_course_1_participant-work_13.jpg";
+const participant_work_14 =
+  "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083771/01iterations/assets_courses_course_1_participant-work_14.jpg";
+const participant_work_15 =
+  "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083774/01iterations/assets_courses_course_1_participant-work_15.jpg";
+const participant_work_16 =
+  "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083778/01iterations/assets_courses_course_1_participant-work_16.jpg";
+const participant_work_17 =
+  "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083780/01iterations/assets_courses_course_1_participant-work_17.jpg";
+const participant_work_18 =
+  "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083782/01iterations/assets_courses_course_1_participant-work_18.jpg";
+
+// import participant_work_7 from "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083743/01iterations/assets_courses_course_1_participant-work_7.png";
 
 export const course1Data: CourseType = {
   name: "Architectural Visualization with Corona Renderer",

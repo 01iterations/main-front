@@ -8,7 +8,7 @@ import {
 export function About() {
   return (
     <AboutContainer>
-      <SideImg src="/assets/home/Highlight-02.webp" alt="" />
+      <SideImg src="https://res.cloudinary.com/dwfgm5onf/image/upload/v1757088347/01iterations/assets_home_Highlight-02.png" alt="" />
       <AboutText>
         <AboutParagraph>
           <h1>01</h1>
@@ -55,7 +55,7 @@ export function About() {
           </p>
         </AboutParagraph>
       </AboutText>
-      <SideImg src="/assets/home/Highlight-02-flipped.webp" alt="" />
+      <SideImg src="https://res.cloudinary.com/dwfgm5onf/image/upload/v1757088350/01iterations/assets_home_Highlight-02-flipped.png" alt="" />
     </AboutContainer>
   );
 }

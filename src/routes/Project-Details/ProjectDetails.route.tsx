@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
-import ProjectDetailsSection from "../../components/ProjectDetails/Sections/ProjectDetailsSection.components";
 import {
   ProjectDetailsWrapper,
   ProjectHeader,

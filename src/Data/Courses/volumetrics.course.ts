@@ -1,10 +1,17 @@
 import { CourseType } from "../../types/courseDetails";
-import cover_img from "/assets/courses/course_2/cover.webp";
-import module1_img from "/assets/courses/course_2/2.webp";
-import module2_img from "/assets/courses/course_2/1.webp";
-import module3_img from "/assets/courses/course_2/3.webp";
-import module4_img from "/assets/courses/course_2/4.webp";
-import module5_img from "/assets/courses/course_2/5.webp";
+
+const cover_img =
+  "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083679/01iterations/assets_courses_course_2_cover.jpg";
+const module1_img =
+  "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083682/01iterations/assets_courses_course_2_2.jpg";
+const module2_img =
+  "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083688/01iterations/assets_courses_course_2_1.jpg";
+const module3_img =
+  "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083691/01iterations/assets_courses_course_2_3.jpg";
+const module4_img =
+  "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083694/01iterations/assets_courses_course_2_4.jpg";
+const module5_img =
+  "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083697/01iterations/assets_courses_course_2_5.jpg";
 
 export const course2Data: CourseType = {
   name: "Mastering Architectural Visualization with Volumetrics and Atmosphere using Corona Renderer",

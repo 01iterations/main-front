@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { SocialIcon } from 'react-social-icons';
 import { Phone, Mail } from 'react-feather';
@@ -16,12 +15,11 @@ import {
     RightSection,
     PartnershipSection,
     PartnershipLogo,
-    PartnershipText,
     SocialSection,
     SocialLinks,
     CopyrightSection,
 } from './GlobalFooter.styles';
-import HomeNavLogo from '/assets/home/home-nav-logo.webp';
+const HomeNavLogo = 'https://res.cloudinary.com/dwfgm5onf/image/upload/v1757088346/01iterations/assets_home_home-nav-logo.png';
 import partnershipLogo from '/assets/footer/partnership.webp';
 
 function GlobalFooter() {

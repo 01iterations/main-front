@@ -3,11 +3,11 @@
 // import HighLight2 from "/assets/home/Highlight-03.webp";
 // import HighLight3 from "/assets/home/Highlight-04.webp";
 // import HighLight4 from "/assets/home/Highlight-05.webp";
-import HighLight1 from "/assets/home/01.webp";
-import HighLight2 from "/assets/home/02.webp";
-import HighLight3 from "/assets/home/03.webp";
-import HighLight4 from "/assets/home/04.webp";
-import HomeNavLogo from "/assets/home/home-nav-logo.webp";
+const HighLight1 = "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757088332/01iterations/assets_home_01.jpg";
+const HighLight2 = "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757088336/01iterations/assets_home_02.jpg";
+const HighLight3 = "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757088339/01iterations/assets_home_03.jpg";
+const HighLight4 = "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757088343/01iterations/assets_home_04.jpg";
+const HomeNavLogo = "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757088346/01iterations/assets_home_home-nav-logo.png";
 
 import ImageSlider from "../../components/imageSlider/imageSlider.component";
 import {
@@ -29,7 +29,18 @@ import LoadingData from "../../components/LoadingData/LoadingData.component";
 
 function Home() {
   const navigate = useNavigate();
-  const loading = useHomeLoading(4000);
+
+  // Define all image URLs that need to load before showing the page
+  const imageUrls = [
+    HighLight1,
+    HighLight2,
+    HighLight3,
+    HighLight4,
+    HomeNavLogo
+  ];
+
+  const loading = useHomeLoading(imageUrls, 3000);
+
   if (loading) {
     return <LoadingData isLoading={loading} />;
   }

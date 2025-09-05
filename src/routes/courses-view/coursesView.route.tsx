@@ -4,8 +4,8 @@ import {
   CourseCenterWrapper,
   CoursesViewWrapper,
 } from "./coursesView.styles";
-import course1_thumbnail from "/assets/courses/course_1/thumbnail.webp";
-import course2_thumbnail from "/assets/courses/course_2/thumbnail.webp";
+const course1_thumbnail = "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757088495/01iterations/assets_courses_course_1_thumbnail.jpg";
+const course2_thumbnail = "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757088497/01iterations/assets_courses_course_2_thumbnail.jpg";
 function CoursesView() {
   const navigate = useNavigate();
   return (

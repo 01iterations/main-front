@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { useState } from 'react';
 import {
     HeaderContainer,
     LogoSection,
@@ -13,9 +12,8 @@ import {
     MobileMenuLink,
     PartnershipBadge,
     PartnershipLogo,
-    PartnershipText,
 } from './GlobalHeader.styles';
-import HomeNavLogo from '/assets/home/home-nav-logo.webp';
+const HomeNavLogo = 'https://res.cloudinary.com/dwfgm5onf/image/upload/v1757088346/01iterations/assets_home_home-nav-logo.png';
 import partnershipLogo from '/assets/footer/partnership.webp';
 
 function GlobalHeader() {

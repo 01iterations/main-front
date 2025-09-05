@@ -4,27 +4,27 @@ const Project3Data: ProjectDataType = {
   title: "Rooftop Camden: The open-concept layout",
   sections: [
     {
-      src: "/assets/projects/project_3/1.webp",
+      src: "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083869/01iterations/assets_projects_project_3_1.jpg",
       caption:
         "This expansive open space encompasses the kitchen, dining, and living areas, all thoughtfully designed to harmonize seamlessly. Nestled in the heart of Camden, London, it boasts an impressive view and incorporates sustainable materials. Furthermore, the space features dedicated units tailored to meet the needs and preferences of the younger demographic, offering a blend of functionality and style.",
     },
     {
-      src: "/assets/projects/project_3/2.webp",
+      src: "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083872/01iterations/assets_projects_project_3_2.jpg",
       caption:
         "In the living room, we’ve meticulously designed enclosures and curated a selection of furniture, fixtures, and equipment (FF&E) to optimize the utilization of the limited space. Every area within the room has been thoughtfully considered to ensure efficient and effective use.",
     },
     {
-      src: "/assets/projects/project_3/3.webp",
+      src: "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083877/01iterations/assets_projects_project_3_3.jpg",
       caption:
         "A comprehensive examination of the Furniture, Fixtures, and Equipment (FF&E) employed within the space has been conducted, aiming to thoroughly understand the selection, placement, and functionality of these elements within the design.",
     },
     {
-      src: "/assets/projects/project_3/4.webp",
+      src: "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083888/01iterations/assets_projects_project_3_4.jpg",
       caption:
         "The bathroom design prioritizes a balance between privacy and a connection to nature. It provides a secluded atmosphere while also offering glimpses of greenery and natural elements, creating a tranquil space that serves as a unique point of interest within the overall design.",
     },
     {
-      src: "/assets/projects/project_3/5.webp",
+      src: "https://res.cloudinary.com/dwfgm5onf/image/upload/v1757083899/01iterations/assets_projects_project_3_5.jpg",
       caption:
         "the bedroom, a minimalistic design approach is employed, highlighted by the inclusion of dynamic headboards for the bed. These headboards introduce elegant curves to the overall design, infusing a sense of movement and sophistication into the space while maintaining the core principles of simplicity and functionality.",
     },
