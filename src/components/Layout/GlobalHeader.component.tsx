@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import {
     HeaderContainer,
     LogoSection,
@@ -7,7 +7,7 @@ import {
     LogoText,
     NavigationSection,
     NavLinks,
-    NavLink,
+    StyledNavLink,
     MobileMenuButton,
     MobileMenu,
     MobileMenuLink,
@@ -34,10 +34,10 @@ function GlobalHeader() {
 
             <NavigationSection>
                 <NavLinks>
-                    <NavLink to="/">Home</NavLink>
-                    <NavLink to="/projects">Projects</NavLink>
-                    <NavLink to="/about">About</NavLink>
-                    <NavLink to="/courses">Courses</NavLink>
+                    <StyledNavLink to="/" end>Home</StyledNavLink>
+                    <StyledNavLink to="/projects">Projects</StyledNavLink>
+                    <StyledNavLink to="/about">About</StyledNavLink>
+                    <StyledNavLink to="/courses">Courses</StyledNavLink>
                 </NavLinks>
 
                 <PartnershipBadge>
@@ -52,7 +52,7 @@ function GlobalHeader() {
             </NavigationSection>
 
             <MobileMenu isOpen={isMobileMenuOpen}>
-                <MobileMenuLink to="/" onClick={() => setIsMobileMenuOpen(false)}>
+                <MobileMenuLink to="/" end onClick={() => setIsMobileMenuOpen(false)}>
                     Home
                 </MobileMenuLink>
                 <MobileMenuLink to="/projects" onClick={() => setIsMobileMenuOpen(false)}>

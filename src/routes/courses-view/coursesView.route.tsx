@@ -6,14 +6,8 @@ import {
 } from "./coursesView.styles";
 import course1_thumbnail from "/assets/courses/course_1/thumbnail.webp";
 import course2_thumbnail from "/assets/courses/course_2/thumbnail.webp";
-import LoadingData from "../../components/LoadingData/LoadingData.component";
-import useLoading from "../../hooks/useLoading.hook";
 function CoursesView() {
   const navigate = useNavigate();
-  const Loading = useLoading(2000);
-  if (Loading) {
-    return <LoadingData isLoading={Loading} />
-  }
   return (
     <CoursesViewWrapper>
       <CourseCenterWrapper>

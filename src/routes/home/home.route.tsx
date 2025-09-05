@@ -18,7 +18,7 @@ import {
   NavItems,
 } from "./home.styles";
 import { useNavigate } from "react-router-dom";
-import useLoading from "../../hooks/useLoading.hook";
+import { useHomeLoading } from "../../hooks/useLoading.hook";
 import LoadingData from "../../components/LoadingData/LoadingData.component";
 
 // const ImgTest = styled.img`
@@ -29,7 +29,7 @@ import LoadingData from "../../components/LoadingData/LoadingData.component";
 
 function Home() {
   const navigate = useNavigate();
-  const loading = useLoading(4000);
+  const loading = useHomeLoading(4000);
   if (loading) {
     return <LoadingData isLoading={loading} />;
   }

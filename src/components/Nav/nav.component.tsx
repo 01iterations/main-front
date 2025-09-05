@@ -3,6 +3,7 @@ import {
     LinkGroup,
     Menu,
     MenuItem,
+    MenuNavLink,
     Navbar,
     // OraganizationLogoImg,
     OrganizationGroup,
@@ -10,15 +11,26 @@ import {
 } from "../../components/Nav/nav.styles";
 
 // import logoImg from "/assets/icons/01itersWhite.webp";
-import { Link } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { useState } from "react";
 
 function Nav() {
     const [showMenu, setShowMenu] = useState(false);
     const [featureBlock] = useState(false);
+    const location = useLocation();
 
     const toggleMenu = () => {
         setShowMenu(!showMenu);
+    };
+
+    const isActive = (path: string) => {
+        // For hash routing with createHashRouter, use pathname
+        const currentPath = location.pathname;
+        // Handle both exact matches and when path is root
+        if (path === '/') {
+            return currentPath === '/';
+        }
+        return currentPath === path;
     };
     return (
         <Navbar>
@@ -27,12 +39,12 @@ function Nav() {
                 {/* <OrganizationLogo>01&nbsp;ITERATIONS </OrganizationLogo> */}
             </OrganizationGroup>
             <LinkGroup>
-                <Link to="/">Home</Link>
-                <Link to="/projects">Projects</Link>
-                <Link to="/about">About</Link>
-                <Link to="/courses">Courses</Link>
-                {featureBlock && <Link to="/">Services</Link>}
-                {featureBlock && <Link to="/contact">Contact</Link>}
+                <NavLink to="/" end className={isActive('/') ? 'active' : ''}>Home</NavLink>
+                <NavLink to="/projects" className={isActive('/projects') ? 'active' : ''}>Projects</NavLink>
+                <NavLink to="/about" className={isActive('/about') ? 'active' : ''}>About</NavLink>
+                <NavLink to="/courses" className={isActive('/courses') ? 'active' : ''}>Courses</NavLink>
+                {featureBlock && <NavLink to="/" className={isActive('/') ? 'active' : ''}>Services</NavLink>}
+                {featureBlock && <NavLink to="/contact" className={isActive('/contact') ? 'active' : ''}>Contact</NavLink>}
             </LinkGroup>
             <Hamburger onClick={toggleMenu}>
                 <span />
@@ -40,12 +52,12 @@ function Nav() {
                 <span />
             </Hamburger>
             <Menu show={showMenu}>
-                <MenuItem to="/">Home</MenuItem>
-                <MenuItem to="/projects">Projects</MenuItem>
-                <MenuItem to="/about">About</MenuItem>
-                <MenuItem to="/courses">Courses</MenuItem>
-                {featureBlock && <MenuItem to="/">Services</MenuItem>}
-                {featureBlock && <MenuItem to="/">Contact</MenuItem>}
+                <MenuNavLink to="/" end className={isActive('/') ? 'active' : ''}>Home</MenuNavLink>
+                <MenuNavLink to="/projects" className={isActive('/projects') ? 'active' : ''}>Projects</MenuNavLink>
+                <MenuNavLink to="/about" className={isActive('/about') ? 'active' : ''}>About</MenuNavLink>
+                <MenuNavLink to="/courses" className={isActive('/courses') ? 'active' : ''}>Courses</MenuNavLink>
+                {featureBlock && <MenuNavLink to="/" className={isActive('/') ? 'active' : ''}>Services</MenuNavLink>}
+                {featureBlock && <MenuNavLink to="/">Contact</MenuNavLink>}
             </Menu>
         </Navbar>
     );

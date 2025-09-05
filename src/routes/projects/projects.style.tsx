@@ -31,7 +31,7 @@ export const ProjectsHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8vh 0 4vh 0;
+  padding: 12vh 0 4vh 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   margin-bottom: 4vh;
 `;
@@ -48,21 +48,6 @@ export const ProjectsTitle = styled.h1`
   }
 `;
 
-export const FilterButton = styled.button`
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: rgba(255, 255, 255, 0.8);
-  padding: 12px 24px;
-  font-family: avenir;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  
-  &:hover {
-    border-color: rgba(255, 255, 255, 0.6);
-    color: white;
-  }
-`;
 
 export const ProjectsGrid = styled.div`
   display: grid;

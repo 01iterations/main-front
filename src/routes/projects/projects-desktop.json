@@ -4,48 +4,55 @@
     "num": 3,
     "quote": {
       "title": "Rooftop Camden"
-    }
+    },
+    "location": "Camden, London"
   },
   {
     "src": "assets/projects/thumbnails/2.webp",
     "num": 2,
     "quote": {
       "title": "Puna Park"
-    }
+    },
+    "location": "Chicago, USA"
   },
   {
     "src": "assets/projects/thumbnails/3.webp",
     "num": 1,
     "quote": {
       "title": "The D House"
-    }
+    },
+    "location": "Rize, Turkey"
   },
   {
     "src": "assets/projects/thumbnails/4.webp",
     "num": 4,
     "quote": {
       "title": "Wood Court"
-    }
+    },
+    "location": "New York, USA"
   },
   {
     "src": "assets/projects/thumbnails/5.webp",
     "num": 5,
     "quote": {
       "title": "Finchley's Apartment"
-    }
+    },
+    "location": "London, UK"
   },
   {
     "src": "assets/projects/thumbnails/6.webp",
     "num": 6,
     "quote": {
       "title": "Madrid's Apartment"
-    }
+    },
+    "location": "Madrid, Spain"
   },
   {
     "src": "assets/projects/thumbnails/7.webp",
     "num": 7,
     "quote": {
       "title": "The Gravity Well"
-    }
+    },
+    "location": "N/A"
   }
 ]

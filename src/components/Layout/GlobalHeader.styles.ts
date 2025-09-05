@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -75,7 +75,7 @@ export const NavLinks = styled.nav`
   }
 `;
 
-export const NavLink = styled(Link)`
+export const StyledNavLink = styled(NavLink)`
   font-family: "Avenir", sans-serif;
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.8);
@@ -90,6 +90,11 @@ export const NavLink = styled(Link)`
     transform: translateY(-1px);
   }
 
+  &.active {
+    color: white;
+    font-weight: 600;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -101,7 +106,8 @@ export const NavLink = styled(Link)`
     transition: width 0.3s ease;
   }
 
-  &:hover::after {
+  &:hover::after,
+  &.active::after {
     width: 100%;
   }
 `;
@@ -197,7 +203,7 @@ export const MobileMenu = styled.div<MobileMenuProps>`
   justify-content: flex-start;
 `;
 
-export const MobileMenuLink = styled(Link)`
+export const MobileMenuLink = styled(NavLink)`
   font-family: "Avenir", sans-serif;
   font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.8);
@@ -209,6 +215,12 @@ export const MobileMenuLink = styled(Link)`
 
   &:hover {
     color: white;
+    transform: scale(1.05);
+  }
+
+  &.active {
+    color: white;
+    font-weight: 600;
     transform: scale(1.05);
   }
 `;

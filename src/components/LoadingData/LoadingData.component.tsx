@@ -10,7 +10,7 @@ import { LoadingContainer, LoadingDataProps } from "./LoadingData.styles";
 
 function LoadingData({ isLoading }: LoadingDataProps) {
     return (
-        <LoadingContainer isLoading={isLoading}>
+        <LoadingContainer isLoading={isLoading} data-testid="loading-container">
             <ImageSlider
                 images={[HighLight1, HighLight2, HighLight3, HighLight4]}
             />

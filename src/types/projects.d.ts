@@ -1,10 +1,11 @@
 export type projectSlides = {
   src: string;
   id?: string;
-  num?:number
+  num?: number;
   quote?: {
     title: string;
   };
+  location?: string;
 };
 
 export type ProjectDataType = {
