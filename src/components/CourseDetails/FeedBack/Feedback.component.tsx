@@ -2,7 +2,6 @@ import {
   AuthorAvatar,
   AuthorSection,
   FeedbackParagraph,
-  FeedbackWrapper,
   LightModeRating,
   PersonalInfo,
   RatingSection,

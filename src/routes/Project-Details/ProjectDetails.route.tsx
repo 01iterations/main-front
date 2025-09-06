@@ -18,7 +18,6 @@ import {
   RelatedProjects,
   GalleryImage,
   GalleryImageContainer,
-  ImageCredits,
   GalleryWrapper,
   GalleryContent,
   HeroImage,
@@ -64,8 +63,8 @@ const FullscreenSlideshow: React.FC<FullscreenSlideshowProps> = ({
         </CloseButton>
 
         {/* Modal Header */}
-        <div style={{
-          position: 'absolute',
+                <div style={{
+          position: 'fixed',
           top: '2rem',
           left: '2rem',
           zIndex: 10000,
@@ -73,12 +72,7 @@ const FullscreenSlideshow: React.FC<FullscreenSlideshowProps> = ({
           backdropFilter: 'blur(10px)',
           padding: '0.8rem 1.5rem',
           borderRadius: '8px',
-          border: '1px solid rgba(255, 255, 255, 0.1)',
-          '@media (max-width: 768px)': {
-            top: '1rem',
-            left: '1rem',
-            padding: '0.6rem 1rem'
-          }
+          border: '1px solid rgba(255, 255, 255, 0.1)'
         }}>
           <p style={{
             fontFamily: 'avenir',
@@ -87,10 +81,7 @@ const FullscreenSlideshow: React.FC<FullscreenSlideshowProps> = ({
             margin: 0,
             fontWeight: 400,
             letterSpacing: '0.05em',
-            textTransform: 'uppercase',
-            '@media (max-width: 768px)': {
-              fontSize: '0.8rem'
-            }
+            textTransform: 'uppercase'
           }}>
             Gallery View
           </p>
