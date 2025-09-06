@@ -4,4 +4,8 @@ export type FeedBackType = {
   authorJobTitle: string;
   rating: number;
   feedback: string;
+  company?: string;
+  courseName?: string;
+  date?: string;
+  verified?: boolean;
 };

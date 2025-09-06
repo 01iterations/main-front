@@ -28,6 +28,7 @@ import {
   CloseButton,
   FullscreenImageContainer,
   FullscreenImage,
+  FullscreenSidebar,
   FullscreenNavigation,
   FullscreenCaption,
 } from "./ProjectDetails.styles";
@@ -41,6 +42,7 @@ interface FullscreenSlideshowProps {
   onClose: () => void;
   onNext: () => void;
   onPrev: () => void;
+  isAnimating?: boolean;
 }
 
 const FullscreenSlideshow: React.FC<FullscreenSlideshowProps> = ({
@@ -49,11 +51,52 @@ const FullscreenSlideshow: React.FC<FullscreenSlideshowProps> = ({
   onClose,
   onNext,
   onPrev,
+  isAnimating = false,
 }) => {
   return (
-    <FullscreenOverlay onClick={onClose}>
+    <FullscreenOverlay onClick={onClose} isAnimating={isAnimating}>
       <FullscreenContainer onClick={(e) => e.stopPropagation()}>
-        <CloseButton onClick={onClose}>×</CloseButton>
+        <CloseButton onClick={onClose} title="Close Gallery (ESC)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </CloseButton>
+
+        {/* Modal Header */}
+        <div style={{
+          position: 'absolute',
+          top: '2rem',
+          left: '2rem',
+          zIndex: 10000,
+          background: 'rgba(0, 0, 0, 0.3)',
+          backdropFilter: 'blur(10px)',
+          padding: '0.8rem 1.5rem',
+          borderRadius: '8px',
+          border: '1px solid rgba(255, 255, 255, 0.1)',
+          '@media (max-width: 768px)': {
+            top: '1rem',
+            left: '1rem',
+            padding: '0.6rem 1rem'
+          }
+        }}>
+          <p style={{
+            fontFamily: 'avenir',
+            fontSize: '0.9rem',
+            color: 'rgba(255, 255, 255, 0.8)',
+            margin: 0,
+            fontWeight: 400,
+            letterSpacing: '0.05em',
+            textTransform: 'uppercase',
+            '@media (max-width: 768px)': {
+              fontSize: '0.8rem'
+            }
+          }}>
+            Gallery View
+          </p>
+        </div>
+
+        {/* Image Section */}
         <FullscreenImageContainer>
           {images && images[currentIndex] && (
             <FullscreenImage
@@ -62,16 +105,57 @@ const FullscreenSlideshow: React.FC<FullscreenSlideshowProps> = ({
             />
           )}
         </FullscreenImageContainer>
-        <FullscreenNavigation>
-          <button onClick={onPrev}>‹</button>
-          <span>{currentIndex + 1} / {images?.length || 1}</span>
-          <button onClick={onNext}>›</button>
-        </FullscreenNavigation>
-        {images && images[currentIndex]?.caption && (
+
+        {/* Sidebar Section */}
+        <FullscreenSidebar>
+          <FullscreenNavigation>
+            <button onClick={onPrev} title="Previous Image (←)">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="15,18 9,12 15,6"></polyline>
+              </svg>
+            </button>
+            <span>{currentIndex + 1} / {images?.length || 1}</span>
+            <button onClick={onNext} title="Next Image (→)">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="9,18 15,12 9,6"></polyline>
+              </svg>
+            </button>
+          </FullscreenNavigation>
+
           <FullscreenCaption>
-            <p>{images[currentIndex].caption}</p>
+            <h3>Image {currentIndex + 1}</h3>
+            {images && images[currentIndex]?.caption ? (
+              <p>{images[currentIndex].caption}</p>
+            ) : (
+              <p>Explore the architectural details and design elements captured in this image. Each photograph showcases the intricate craftsmanship and thoughtful design that defines this project.</p>
+            )}
           </FullscreenCaption>
-        )}
+        </FullscreenSidebar>
+
+        {/* Keyboard shortcuts hint - hidden on mobile */}
+        <div style={{
+          position: 'absolute',
+          bottom: '2rem',
+          right: '2rem',
+          zIndex: 10000,
+          background: 'rgba(0, 0, 0, 0.3)',
+          backdropFilter: 'blur(10px)',
+          padding: '0.6rem 1rem',
+          borderRadius: '6px',
+          border: '1px solid rgba(255, 255, 255, 0.1)',
+          display: window.innerWidth <= 768 ? 'none' : 'block'
+        }}>
+          <p style={{
+            fontFamily: 'avenir',
+            fontSize: '0.8rem',
+            color: 'rgba(255, 255, 255, 0.6)',
+            margin: 0,
+            fontWeight: 300,
+            letterSpacing: '0.02em'
+          }}>
+            ESC to close • ← → to navigate
+          </p>
+        </div>
       </FullscreenContainer>
     </FullscreenOverlay>
   );
@@ -82,6 +166,7 @@ const ProjectDetails = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [isModalAnimating, setIsModalAnimating] = useState(false);
   const { projectNum } = useParams();
   const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -133,12 +218,23 @@ const ProjectDetails = () => {
   };
 
   const openFullscreen = () => {
+    setIsModalAnimating(true);
     setIsFullscreen(true);
     setIsAutoPlaying(false); // Pause auto-play when in fullscreen
+
+    // Reset animation state after animation completes
+    setTimeout(() => {
+      setIsModalAnimating(false);
+    }, 300);
   };
 
   const closeFullscreen = () => {
-    setIsFullscreen(false);
+    setIsModalAnimating(true);
+    // Delay the actual close to allow exit animation
+    setTimeout(() => {
+      setIsFullscreen(false);
+      setIsModalAnimating(false);
+    }, 200);
   };
 
   const nextImageFullscreen = () => {
@@ -156,6 +252,20 @@ const ProjectDetails = () => {
       );
     }
   };
+
+  // Handle body scroll prevention when modal is open
+  useEffect(() => {
+    if (isFullscreen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isFullscreen]);
 
   // Handle keyboard events for fullscreen
   useEffect(() => {
@@ -193,6 +303,28 @@ const ProjectDetails = () => {
       return projectData.sections[0].caption;
     }
     return "A comprehensive architectural project that combines innovative design with functional living spaces, creating a harmonious environment that reflects contemporary lifestyle needs.";
+  };
+
+  const getNextProjectUrl = () => {
+    if (!projectNum) return "/projects";
+    const currentIndex = Number(projectNum) - 1;
+    const nextIndex = currentIndex + 1;
+    // Check if next project exists (we have 7 projects total)
+    if (nextIndex < 7) {
+      return `/projects/${nextIndex + 1}`;
+    }
+    // If we're at the last project, go back to first
+    return "/projects/1";
+  };
+
+  const getNextProjectTitle = () => {
+    if (!projectNum) return "Next Project";
+    const currentIndex = Number(projectNum) - 1;
+    const nextIndex = currentIndex + 1;
+    if (nextIndex < 7) {
+      return "Next Project";
+    }
+    return "First Project";
   };
 
   return (
@@ -288,20 +420,32 @@ const ProjectDetails = () => {
                   )}
                 </GalleryImageContainer>
 
-                {projectData.sections && projectData.sections[currentImageIndex]?.caption && (
-                  <ImageCredits>
-                    <p>{projectData.sections[currentImageIndex].caption}</p>
-                  </ImageCredits>
-                )}
               </GalleryContent>
 
               <GalleryNavigation>
-                <button onClick={prevImage}>Prev</button>
+                <button onClick={prevImage} title="Previous Image">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="15,18 9,12 15,6"></polyline>
+                  </svg>
+                </button>
                 <span>{currentImageIndex + 1} / {projectData.sections?.length || 1}</span>
-                <button onClick={nextImage}>Next</button>
+                <button onClick={nextImage} title="Next Image">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="9,18 15,12 9,6"></polyline>
+                  </svg>
+                </button>
                 {projectData.sections && projectData.sections.length > 1 && (
-                  <button onClick={toggleAutoPlay} style={{ marginLeft: '2rem' }}>
-                    {isAutoPlaying ? 'Pause' : 'Play'}
+                  <button onClick={toggleAutoPlay} title={isAutoPlaying ? 'Pause Slideshow' : 'Play Slideshow'}>
+                    {isAutoPlaying ? (
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="6" y="4" width="4" height="16"></rect>
+                        <rect x="14" y="4" width="4" height="16"></rect>
+                      </svg>
+                    ) : (
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <polygon points="5,3 19,12 5,21"></polygon>
+                      </svg>
+                    )}
                   </button>
                 )}
               </GalleryNavigation>
@@ -310,8 +454,20 @@ const ProjectDetails = () => {
 
           <RelatedProjects>
             <nav>
-              <a href="/projects">INDEX</a>
-              <a href="/projects">Next Project</a>
+              <a href="/projects">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <line x1="3" y1="12" x2="21" y2="12"></line>
+                  <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                INDEX
+              </a>
+              <a href={getNextProjectUrl()}>
+                {getNextProjectTitle()}
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="9,18 15,12 9,6"></polyline>
+                </svg>
+              </a>
             </nav>
           </RelatedProjects>
 
@@ -323,6 +479,7 @@ const ProjectDetails = () => {
               onClose={closeFullscreen}
               onNext={nextImageFullscreen}
               onPrev={prevImageFullscreen}
+              isAnimating={isModalAnimating}
             />
           )}
         </>

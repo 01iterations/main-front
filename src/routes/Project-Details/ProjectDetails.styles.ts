@@ -349,35 +349,36 @@ export const GalleryWrapper = styled.div`
 
 export const GalleryContent = styled.div`
   display: flex;
-  gap: 4rem;
-  align-items: flex-start;
-  margin-bottom: 2rem;
+  gap: 0;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
 
   @media (max-width: 1024px) {
     flex-direction: column;
-    gap: 2rem;
+    gap: 0;
   }
 `;
 
 export const GalleryImageContainer = styled.div`
-  flex: 2;
+  width: 100%;
   height: 70vh;
   overflow: hidden;
   position: relative;
-  border-radius: 2px;
+  border-radius: 4px;
   cursor: pointer;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: rgba(255, 255, 255, 0.02);
 
   &:hover {
-    transform: scale(1.01);
+    transform: scale(1.005);
+    background: rgba(255, 255, 255, 0.04);
   }
 
   @media (max-width: 1024px) {
-    flex: none;
-    width: 100%;
     height: 50vh;
   }
 `;
@@ -425,64 +426,64 @@ export const GalleryNavigation = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
-  margin-top: 2rem;
+  gap: 2.5rem;
   padding: 1.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
   button {
     background: transparent;
-    border: none;
-    color: rgba(255, 255, 255, 0.8);
-    padding: 0;
-    font-family: avenir;
-    font-size: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0.5rem;
+    border-radius: 50%;
     cursor: pointer;
-    transition: all 0.3s ease;
-    min-width: 60px;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    font-weight: 400;
-    position: relative;
-    padding-bottom: 0.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 1px;
-      background: rgba(255, 255, 255, 0.8);
-      transition: width 0.3s ease;
+    svg {
+      transition: all 0.3s ease;
     }
 
     &:hover {
       color: rgba(255, 255, 255, 1);
+      border-color: rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.05);
+      transform: translateY(-1px);
 
-      &::after {
-        width: 100%;
+      svg {
+        transform: scale(1.05);
       }
     }
 
     &:active {
-      transform: translateY(1px);
+      transform: translateY(0);
     }
   }
 
   span {
-    font-family: avenir;
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.5);
-    min-width: 60px;
+    font-family: "Avenir", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      sans-serif;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    min-width: 70px;
     text-align: center;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 0.05em;
+    padding: 0.4rem 0.8rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
   }
 `;
 
 export const RelatedProjects = styled.div`
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 4rem 0;
+  padding: 3rem 0;
   margin: 0 8%;
   max-width: 1400px;
   margin-left: auto;
@@ -490,7 +491,7 @@ export const RelatedProjects = styled.div`
 
   @media (max-width: 1024px) {
     margin: 0 5%;
-    padding: 3rem 0;
+    padding: 2.5rem 0;
   }
 
   nav {
@@ -499,35 +500,86 @@ export const RelatedProjects = styled.div`
     align-items: center;
 
     a {
-      font-family: avenir;
-      font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.6);
+      font-family: "Avenir", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, sans-serif;
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.7);
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      font-weight: 300;
-      transition: all 0.3s ease;
+      font-weight: 400;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.8rem 1.2rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.02);
+
+      svg {
+        transition: all 0.3s ease;
+        opacity: 0.7;
+      }
 
       &:hover {
-        color: rgba(255, 255, 255, 0.9);
+        color: rgba(255, 255, 255, 1);
+        border-color: rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.05);
+        transform: translateY(-1px);
+
+        svg {
+          opacity: 1;
+          transform: scale(1.05);
+        }
+      }
+
+      &:active {
+        transform: translateY(0);
       }
     }
   }
 `;
 
 // Fullscreen Slideshow Styles
-export const FullscreenOverlay = styled.div`
+export const FullscreenOverlay = styled.div<{ isAnimating?: boolean }>`
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(0, 0, 0, 0.98);
   z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
+  animation: ${(props) =>
+    props.isAnimating
+      ? "modalFadeIn 0.3s ease-out"
+      : "modalFadeOut 0.2s ease-in"};
+
+  @keyframes modalFadeIn {
+    from {
+      opacity: 0;
+      backdrop-filter: blur(0px);
+    }
+    to {
+      opacity: 1;
+      backdrop-filter: blur(20px);
+    }
+  }
+
+  @keyframes modalFadeOut {
+    from {
+      opacity: 1;
+      backdrop-filter: blur(20px);
+    }
+    to {
+      opacity: 0;
+      backdrop-filter: blur(0px);
+    }
+  }
 `;
 
 export const FullscreenContainer = styled.div`
@@ -535,125 +587,249 @@ export const FullscreenContainer = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  align-items: stretch;
   justify-content: center;
-  padding: 2rem;
+  padding: 0;
   box-sizing: border-box;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
 `;
 
 export const CloseButton = styled.button`
   position: absolute;
   top: 2rem;
   right: 2rem;
-  background: transparent;
-  border: none;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.8);
-  font-size: 3rem;
+  font-size: 2rem;
   cursor: pointer;
   z-index: 10000;
-  transition: all 0.3s ease;
-  width: 60px;
-  height: 60px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  backdrop-filter: blur(10px);
 
   &:hover {
     color: rgba(255, 255, 255, 1);
     background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
   }
 
   @media (max-width: 768px) {
     top: 1rem;
     right: 1rem;
-    font-size: 2.5rem;
-    width: 50px;
-    height: 50px;
+    font-size: 1.5rem;
+    width: 45px;
+    height: 45px;
   }
 `;
 
 export const FullscreenImageContainer = styled.div`
-  flex: 1;
+  flex: 2;
   width: 100%;
-  max-width: 90vw;
-  max-height: 80vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  position: relative;
+  background: rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 1024px) {
+    flex: 1;
+    height: 60vh;
+    padding: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    height: 50vh;
+    padding: 1rem 0.5rem;
+  }
+
+  @media (max-width: 480px) {
+    height: 45vh;
+    padding: 0.5rem;
+  }
 `;
 
 export const FullscreenImage = styled.img`
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  border-radius: 4px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease;
+  border-radius: 8px;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: imageSlideIn 0.4s ease-out;
+
+  @keyframes imageSlideIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95) translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+`;
+
+export const FullscreenSidebar = styled.div`
+  flex: 1;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow-y: auto;
+
+  @media (max-width: 1024px) {
+    height: 40vh;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    height: 50vh;
+    padding: 1rem;
+  }
 `;
 
 export const FullscreenNavigation = styled.div`
   display: flex;
   align-items: center;
-  gap: 3rem;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   margin-bottom: 2rem;
 
   button {
-    background: transparent;
-    border: none;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     color: rgba(255, 255, 255, 0.8);
-    font-size: 3rem;
     cursor: pointer;
-    transition: all 0.3s ease;
-    width: 60px;
-    height: 60px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    backdrop-filter: blur(10px);
+
+    svg {
+      transition: all 0.3s ease;
+    }
 
     &:hover {
       color: rgba(255, 255, 255, 1);
       background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+
+      svg {
+        transform: scale(1.1);
+      }
+    }
+
+    &:active {
+      transform: translateY(0);
     }
 
     @media (max-width: 768px) {
-      font-size: 2.5rem;
-      width: 50px;
-      height: 50px;
+      width: 45px;
+      height: 45px;
     }
   }
 
   span {
     font-family: avenir;
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.6);
-    font-weight: 300;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;
     letter-spacing: 0.05em;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    min-width: 80px;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    gap: 1.5rem;
+    padding: 1.5rem 0;
   }
 `;
 
 export const FullscreenCaption = styled.div`
-  max-width: 800px;
-  text-align: center;
-  padding: 0 2rem;
+  flex: 1;
+  text-align: left;
+  padding: 0;
+  margin-bottom: 2rem;
+
+  h3 {
+    font-family: caslon;
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin: 0 0 1.5rem 0;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+  }
 
   p {
     font-family: avenir;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.8);
-    line-height: 1.6;
-    margin: 0;
+    line-height: 1.7;
+    margin: 0 0 1.5rem 0;
     font-weight: 300;
+    letter-spacing: 0.02em;
+  }
+
+  @media (max-width: 1024px) {
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
   }
 
   @media (max-width: 768px) {
-    padding: 0 1rem;
+    h3 {
+      font-size: 1.1rem;
+    }
 
     p {
-      font-size: 1rem;
+      font-size: 0.9rem;
     }
   }
 `;

@@ -62,9 +62,6 @@ function GlobalHeader() {
                 <MobileMenuLink to="/courses" onClick={() => setIsMobileMenuOpen(false)}>
                     Courses
                 </MobileMenuLink>
-                <PartnershipBadge>
-                    <PartnershipLogo src={partnershipLogo} alt="Chaos Academic Partner" />
-                </PartnershipBadge>
             </MobileMenu>
         </HeaderContainer>
     );
